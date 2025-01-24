@@ -1,0 +1,67 @@
+header {
+  height: 64px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_menu ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub_menu ul {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_menu ul,
+.sub_menu ul {
+  height: 32px;
+
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-font-color);
+}
+
+.main_menu ul li:hover,
+.sub_menu ul li:hover:not(.dark_mode_container),
+.sub_menu ul li a:hover {
+  color: var(--primary-hover-font-color);
+}
+
+.sub_menu .img_box {
+  width: var(--primary-image-box-size);
+  height: var(--primary-image-box-size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark_mode_container {
+  padding: 2px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  position: relative;
+}
+
+.dark_mode_container .choice_box {
+  position: absolute;
+  background-color: #fff;
+  width: var(--primary-image-box-size);
+  height: var(--primary-image-box-size);
+  border-radius: 2rem;
+  box-shadow: 1px 1px 2px #111;
+
+  cursor: pointer;
+}
