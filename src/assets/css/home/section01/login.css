@@ -1,8 +1,7 @@
 .login_container {
-  width: 35%;
+  width: 100%;
   padding: 4rem;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
+  border: 1px solid var(--primary-home-border-color);
 }
 
 .login_box {

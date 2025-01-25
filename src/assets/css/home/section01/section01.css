@@ -1,0 +1,11 @@
+.section01 {
+  margin: 24px 0;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 62% 35%;
+  row-gap: 1rem;
+}
+
+.section01 .search_container {
+  grid-row: 1 / span 2;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../assets/css/home/search.css";
+import "../../../../assets/css/home/section01/search.css";
 import { IoSearch } from "react-icons/io5";
 
 const Search = () => {
