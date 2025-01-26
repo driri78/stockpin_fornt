@@ -1,15 +1,16 @@
 .search_container {
   width: 100%;
-  padding: 4rem;
-  border: 1px solid black;
+  padding: 2rem;
+  padding-right: 3rem;
+  border-right: 2px solid var(--primary-home-border-color);
 }
 
 .search_container .input_box {
-  width: 100%;
   height: 3rem;
+  margin-bottom: 2rem;
   padding: 0.5rem;
   padding-left: 2.5rem;
-  border: 1px solid #ddd;
+  background-color: #0220470d;
   border-radius: 3rem;
 
   position: relative;
@@ -35,26 +36,134 @@
   font-size: 1.25rem;
   width: 100%;
   height: 100%;
+  background-color: transparent;
 }
 
-.search_container .content {
-  padding: 1rem;
+.search_container .content .title {
+  padding-bottom: 1.25rem;
+
   display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.search_container .content .title span {
+  color: var(--primary-deactivate-font-color);
+}
+
+.search_container .content .explanation {
+  padding-bottom: 1rem;
+  color: var(--primary-deactivate-font-color);
+  font-size: 14px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .search_container .content .rank {
-  width: 30%;
+  color: var(--primary-content-font-color);
 }
 
 .search_container .content .rank li {
-  padding: 0.2rem 0;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+
   display: flex;
+  align-items: center;
 }
 
-.search_container .content .rank .number {
+.search_container .content .rank li:first-of-type {
   font-weight: bold;
 }
 
-.search_container .content .chart {
-  width: 70%;
+.search_container .content .stocks {
+  width: 46%;
+  font-weight: bold;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search_container .content .stocks svg {
+  margin-left: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+
+  cursor: pointer;
+}
+
+.search_container .content .stocks .name svg {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  cursor: default;
+}
+
+.search_container .content .stocks .name {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.search_container .content .number {
+  width: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.search_container .content .value,
+.search_container .content .fluctuating_value_rate,
+.search_container .content .trading_volume {
+  width: 18%;
+  text-align: right;
+}
+
+.search_container .content .fluctuating_value_rate.up {
+  color: var(--primary-up-font-color);
+}
+
+.search_container .content .fluctuating_value_rate.down {
+  color: var(--primary-down-font-color);
+}
+
+.paging_container {
+  padding: 1.5rem 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.paging_container ul {
+  color: var(--primary-deactivate-font-color);
+  font-size: 1rem;
+  font-weight: bold;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.paging_container ul li {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 1.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.paging_container ul li.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.paging_container .img_box {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

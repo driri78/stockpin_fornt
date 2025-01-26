@@ -2,8 +2,8 @@
   margin: 24px 0;
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 62% 35%;
-  row-gap: 1rem;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 40% 60%;
 }
 
 .section01 .search_container {

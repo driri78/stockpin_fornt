@@ -1,0 +1,58 @@
+.trending_board_container {
+  padding: 0 3rem;
+  padding-top: 2rem;
+}
+
+.trending_board_container .title {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.trending_board_container .title .img_box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending_board_container .title .img_box svg {
+  color: #dd0000;
+}
+
+.trending_board_container .title span {
+  font-size: 1.25rem;
+}
+
+.trending_board_container ul li {
+  padding: 0.25rem 0;
+
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: bold;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.trending_board_container .remote_container {
+  margin-top: 1.5rem;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending_board_container .remote_container span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #000;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
