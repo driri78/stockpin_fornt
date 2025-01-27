@@ -11,19 +11,16 @@ const Header = () => {
       <nav className="main_menu">
         <ul>
           <li>
-            <a href="#">뉴스</a>
+            <a href="#">홈</a>
           </li>
           <li>
             <a href="#">시세&차트</a>
           </li>
           <li>
-            <a href="#">자유게시판</a>
+            <a href="#">뉴스</a>
           </li>
           <li>
-            <a href="#">마이페이지</a>
-          </li>
-          <li>
-            <a href="#">대시보드</a>
+            <a href="#">내 계좌</a>
           </li>
         </ul>
       </nav>
