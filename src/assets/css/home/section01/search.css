@@ -2,7 +2,6 @@
   width: 100%;
   padding: 2rem;
   padding-right: 3rem;
-  border-right: 2px solid var(--primary-home-border-color);
 }
 
 .search_container .input_box {

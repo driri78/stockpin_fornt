@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFireAlt } from "react-icons/fa";
-import "../../../../assets/css/home/section02/trendingBoard.css";
+import "../../../../assets/css/home/section01/trendingBoard.css";
 
 const TrendingBoard = () => {
   return (
@@ -9,7 +9,7 @@ const TrendingBoard = () => {
         <div className="img_box">
           <FaFireAlt />
         </div>
-        <span>hot 게시판</span>
+        <span>뜨고 있는 커뮤니티</span>
       </h2>
       <ul>
         <li>

@@ -11,9 +11,12 @@
 .stock_index_container ul li {
   padding: 0.5rem;
   border-radius: 1rem;
-  font-size: 1rem;
 
   cursor: pointer;
+}
+
+.stock_index_container ul li h2 {
+  font-size: 1rem;
 }
 
 .stock_index_container ul li.active {

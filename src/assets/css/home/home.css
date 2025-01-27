@@ -1,0 +1,6 @@
+.home_container {
+  margin: 24px 0;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 65% 35%;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
-import "../../../../assets/css/home/section01/StockIndex.css";
+import "../../../../assets/css/home/section02/StockIndex.css";
 
 const StockIndex = () => {
   useEffect(() => {
@@ -90,8 +90,12 @@ const StockIndex = () => {
   return (
     <div className="stock_index_container">
       <ul>
-        <li className="active">지수 · 환율</li>
-        <li>원자재</li>
+        <li className="active">
+          <h2>인기 테마</h2>
+        </li>
+        <li>
+          <h2>인기 업종</h2>
+        </li>
       </ul>
       <div>
         <div id="chart"></div>
