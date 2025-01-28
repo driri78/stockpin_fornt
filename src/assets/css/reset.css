@@ -76,3 +76,11 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.up {
+  color: var(--primary-up-font-color);
+}
+
+.down {
+  color: var(--primary-down-font-color);
+}

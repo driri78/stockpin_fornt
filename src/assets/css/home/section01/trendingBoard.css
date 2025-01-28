@@ -1,10 +1,13 @@
 .trending_board_container {
-  padding: 0 3rem;
-  padding-top: 2rem;
+  margin: 2rem;
+  padding: 2rem 1rem;
+  border: 1px solid var(--primary-home-border-color);
+  border-radius: 1rem;
 }
 
 .trending_board_container .title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-font-color);
   display: flex;
   gap: 0.25rem;
   align-items: center;
@@ -26,33 +29,81 @@
   font-size: 1.25rem;
 }
 
-.trending_board_container ul li {
-  padding: 0.25rem 0;
-
-  color: #1a1a1a;
-  font-size: 1rem;
-  font-weight: bold;
-
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+.trending_board_container .company_info_container,
+.trending_board_container .reply_container,
+.trending_board_container .comunity_go_container {
+  color: var(--primary-content-font-color);
 }
 
-.trending_board_container .remote_container {
-  margin-top: 1.5rem;
+.trending_board_container .company_info_container {
+  padding: 0 0.75rem;
+  background-color: #f2f4f6;
 
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
 }
 
-.trending_board_container .remote_container span {
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #000;
-  border-radius: 0.5rem;
+.trending_board_container .company_info_container .item {
+  width: calc(100% / 5);
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0.25rem;
+  margin-bottom: 0;
+
+  font-size: 0.9rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   cursor: pointer;
+}
+
+.trending_board_container .company_info_container .item.active {
+  background-color: #fff;
+  color: inherit;
+}
+
+.trending_board_container .company_info_container .info {
+  font-weight: bold;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.trending_board_container .reply_container {
+  padding: 0 0.75rem;
+}
+
+.trending_board_container .reply_container .item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--primary-home-border-color);
+}
+
+.trending_board_container .reply_container .item .user_info {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.trending_board_container .reply_container .item:last-of-type {
+  border-bottom: none;
+}
+
+.trending_board_container .reply_container .item p {
+  padding: 0.5rem 0;
+}
+
+.trending_board_container .comunity_go_container {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trending_board_container .comunity_go_container a {
+  padding: 0.5rem;
+}
+
+.trending_board_container .comunity_go_container a:hover {
+  text-decoration: underline;
 }

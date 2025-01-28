@@ -107,7 +107,6 @@
 
 .search_container .content .number {
   width: 1.5rem;
-  color: var(--primary-color);
   text-align: center;
 }
 
@@ -116,14 +115,6 @@
 .search_container .content .trading_volume {
   width: 18%;
   text-align: right;
-}
-
-.search_container .content .fluctuating_value_rate.up {
-  color: var(--primary-up-font-color);
-}
-
-.search_container .content .fluctuating_value_rate.down {
-  color: var(--primary-down-font-color);
 }
 
 .paging_container {

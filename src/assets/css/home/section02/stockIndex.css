@@ -23,3 +23,21 @@
   background-color: #0220470d;
   font-weight: bold;
 }
+
+.stock_index_container .content .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stock_index_container .content .item .info h3 {
+  padding: 0.25rem 0;
+  color: var(--primary-deactivate-font-color);
+  font-size: 1rem;
+}
+
+.stock_index_container .content .item .info .value {
+  padding: 0.25rem 0;
+  display: flex;
+  gap: 0.25rem;
+}

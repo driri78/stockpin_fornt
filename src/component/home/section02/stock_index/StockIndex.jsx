@@ -7,8 +7,8 @@ const StockIndex = () => {
     // 차트 옵션 설정
     let options = {
       chart: {
-        width: 150,
-        height: 150,
+        width: 100,
+        height: 100,
         type: "area",
         toolbar: {
           show: false,
@@ -29,14 +29,19 @@ const StockIndex = () => {
       fill: {
         type: "gradient",
         gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.7,
-          opacityTo: 0.9,
-          stops: [0, 90, 100],
+          type: "vertical", // (vertical, horizontal 등)
+          shadeIntensity: 0.5,
+          gradientToColors: ["#318bf6"],
+          inverseColors: false,
+          opacityFrom: 0.5,
+          opacityTo: 0.3,
         },
       },
       grid: {
         show: false,
+        padding: {
+          left: 0,
+        },
       },
       xaxis: {
         categories: [
@@ -97,8 +102,18 @@ const StockIndex = () => {
           <h2>인기 업종</h2>
         </li>
       </ul>
-      <div>
-        <div id="chart"></div>
+      <div className="content">
+        <div className="item">
+          <div id="chart"></div>
+          <div className="info">
+            <h3>코스피</h3>
+            <div className="value down">
+              <span>2,536.80</span>
+              <span>-21.31</span>
+              <span>(0.8%)</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
