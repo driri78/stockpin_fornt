@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../assets/css/header/header.css";
 import { PiMoonStarsFill, PiSunHorizonFill } from "react-icons/pi";
 
@@ -5,16 +6,17 @@ const Header = () => {
   return (
     <header>
       <h1>
-        로고
-        <span>StockPin</span>
+        <Link to="/">
+          <span>로고 StockPin</span>
+        </Link>
       </h1>
       <nav className="main_menu">
         <ul>
           <li>
-            <a href="#">홈</a>
+            <Link to="/">홈</Link>
           </li>
           <li>
-            <a href="#">시세&차트</a>
+            <Link to="/chart/list">시세&차트</Link>
           </li>
           <li>
             <a href="#">뉴스</a>
