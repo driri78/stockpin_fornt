@@ -1,0 +1,106 @@
+.stock_list_container {
+  width: 93%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock_list_container aside {
+  min-width: 220px;
+}
+
+.stock_list_container aside h2 {
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.stock_list_container aside h3 {
+  margin: 2.5rem 0.1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: var(--primary-deactivate-font-color);
+}
+
+.stock_list_container aside .user_create_filter_box ul li,
+.stock_list_container aside .stockPin_create_filter_box ul li {
+  cursor: pointer;
+}
+
+.stock_list_container aside .user_create_filter_box ul li:not(:last-of-type),
+.stock_list_container aside .stockPin_create_filter_box ul li {
+  margin: 0.25rem 0;
+  padding: 0 0.5rem;
+  line-height: 2.25rem;
+  border-radius: 0.5rem;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-placeholder-font-color);
+
+  transition: 0.2s;
+}
+
+.stock_list_container aside .user_create_filter_box ul li:hover,
+.stock_list_container aside .stockPin_create_filter_box ul li:hover {
+  background-color: var(--primary-list-hover-backgoundcolor);
+}
+
+.stock_list_container aside .user_create_filter_box button {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.stock_list_container aside .user_create_filter_box .img_box {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stock_list_container aside .stockPin_create_filter_box ul li.active {
+  color: var(--primary-content-font-color);
+  background-color: var(--primary-list-active-backgoundcolor);
+}
+
+.stock_list_container aside .stockPin_create_filter_box ul li {
+  position: relative;
+}
+
+.stock_list_container
+  aside
+  .stockPin_create_filter_box
+  ul
+  li:hover
+  .hover_content_box {
+  display: block;
+}
+
+.stock_list_container aside .stockPin_create_filter_box .hover_content_box {
+  display: none;
+
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 19px #b3b3b366;
+
+  color: var(--primary-content-font-color);
+  white-space: nowrap;
+  position: absolute;
+  left: 106%;
+  top: 0;
+}
+
+.stock_list_container main {
+  width: calc(100% - 220px - 40px);
+}
+
+main {
+  border: 1px solid #000;
+}

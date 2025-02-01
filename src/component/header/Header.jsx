@@ -16,7 +16,7 @@ const Header = () => {
             <Link to="/">홈</Link>
           </li>
           <li>
-            <Link to="/stocks">시세&차트</Link>
+            <Link to="/stocks">주식 모아보기</Link>
           </li>
           <li>
             <a href="#">뉴스</a>

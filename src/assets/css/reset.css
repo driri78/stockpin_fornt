@@ -40,11 +40,9 @@
   --primary-deactivate-font-color: #6b7684;
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
+  --primary-list-hover-backgoundcolor: #0220470d;
+  --primary-list-active-backgoundcolor: #0220470d;
   --primary-image-box-size: 2rem;
-}
-#root {
-  margin: 0 auto;
-  width: 85%;
 }
 
 * {
@@ -73,6 +71,8 @@ input {
 }
 
 button {
+  font-family: "Spoqa Han Sans Neo";
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
