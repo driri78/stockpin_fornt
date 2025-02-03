@@ -41,7 +41,7 @@
 
 .user_create_filter_box ul li:hover,
 .stockPin_create_filter_box ul li > h4:hover {
-  background-color: var(--primary-list-hover-backgoundcolor);
+  background-color: var(--primary-filter-hover-backgoundcolor);
 }
 
 .user_create_filter_box button {
@@ -64,7 +64,7 @@
 .stockPin_create_filter_box ul li > h4.active {
   color: var(--primary-content-font-color);
   font-weight: bold;
-  background-color: var(--primary-list-active-backgoundcolor);
+  background-color: var(--primary-filter-hover-backgoundcolor);
 }
 
 .stockPin_create_filter_box ul li {
@@ -121,6 +121,71 @@
 }
 
 .filter_list_container ul {
-  margin: 0.75rem;
+  margin: 0.75rem 0;
   display: flex;
+  gap: 0.4rem;
+}
+
+.filter_list_container ul li .filter_icon_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_list_container ul li .filter_icon_box svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.filter_list_container ul li .flag_img_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_list_container ul li .flag_img_box svg {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+}
+
+.filter_list_container ul li .arrow_down_img_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter_list_container ul li .arrow_down_img_box svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.filter_list_container ul li button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-filter-button-backgoundcolor);
+
+  color: var(--primary-content-font-color);
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+}
+
+.filter_list_container ul li button span {
+  white-space: nowrap;
+}
+
+.filter_stock_list_container {
+  margin-top: 2rem;
+  width: 100%;
 }

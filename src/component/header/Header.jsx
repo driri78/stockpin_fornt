@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../assets/css/header/header.css";
+import "@assets/css/header/header.css";
 import { PiMoonStarsFill, PiSunHorizonFill } from "react-icons/pi";
 
 const Header = () => {

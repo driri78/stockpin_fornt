@@ -1,8 +1,11 @@
 import React from "react";
-import { FaPlusCircle } from "react-icons/fa";
+import { FaPlusCircle, FaHeart } from "react-icons/fa";
+import { FaBuildingUser } from "react-icons/fa6";
 import { IoFilter } from "react-icons/io5";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { IoMdRefresh } from "react-icons/io";
 import "../../assets/css/stock/stock_list.css";
-
+import KoreaFlag from "../../assets/images/korea_flag.svg";
 const StockList = () => {
   return (
     <div className="stock_list_container">
@@ -77,38 +80,135 @@ const StockList = () => {
           <ul>
             <li>
               <button>
-                <IoFilter />
+                <div className="filter_icon_box">
+                  <IoFilter />
+                </div>
                 <span>필터 추가</span>
               </button>
               <div></div>
             </li>
             <li>
               <button>
+                <div className="flag_img_box">
+                  <KoreaFlag />
+                </div>
                 <span>국내</span>
+                <div className="arrow_down_img_box">
+                  <MdKeyboardArrowDown />
+                </div>
               </button>
               <div></div>
             </li>
-            <li>카테고리</li>
-            <li>시가총액</li>
-            <li>거래량</li>
-            <li>주가 등락률</li>
+            <li>
+              <button>
+                <span>카테고리</span>
+                <div className="arrow_down_img_box">
+                  <MdKeyboardArrowDown />
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span>시가총액</span>
+                <div className="arrow_down_img_box">
+                  <MdKeyboardArrowDown />
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span>거래량</span>
+                <div className="arrow_down_img_box">
+                  <MdKeyboardArrowDown />
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span>주가 등락률</span>
+                <div className="arrow_down_img_box">
+                  <MdKeyboardArrowDown />
+                </div>
+              </button>
+            </li>
           </ul>
         </nav>
-        <table>
+        <table className="filter_stock_list_container">
           <thead>
             <tr>
               <th>
-                검색된 주식・<span>100개</span>
+                <div>
+                  <span>검색된 주식</span>・<span>100개</span>
+                  <IoMdRefresh />
+                </div>
               </th>
-              <th>현재가</th>
-              <th>등락률</th>
-              <th>카테고리</th>
-              <th>시가총액</th>
-              <th>거래량</th>
-              <th>주가 등락률</th>
+              <th>
+                <div>
+                  <span>현재가</span>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>등락률</span>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>카테고리</span>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>시가총액</span>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <span>거래량</span>
+                </div>
+              </th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            <tr>
+              <td>
+                <div>
+                  <FaHeart />
+                  <span>1</span>
+                  <div>
+                    <FaBuildingUser />
+                    <span>애플</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>333,383원</span>
+                </div>
+              </td>
+              <td>
+                <div className="down">
+                  <span>-2.5%</span>
+                  <span>-8300원</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>스마트폰 제조</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>5,086.7조원</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>101,075,128주</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </main>
     </div>

@@ -1,5 +1,4 @@
 import Router from "./page/Router";
-
 function App() {
   return (
     <>
