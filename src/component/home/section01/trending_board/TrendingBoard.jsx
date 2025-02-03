@@ -17,14 +17,14 @@ const TrendingBoard = () => {
         <div className="company_info_container">
           <div className="item active">
             <div className="info">
-              <FaBuildingUser style={{ width: "1.5rem", height: "1.5rem" }} />
+              <FaBuildingUser />
               <span>신젠</span>
             </div>
             <span className="down">-2.2%</span>
           </div>
           <div className="item">
             <div className="info">
-              <FaBuildingUser style={{ width: "1.5rem", height: "1.5rem" }} />
+              <FaBuildingUser />
               <span>삼성전자</span>
             </div>
             <span className="up">+8.8%</span>
@@ -33,7 +33,7 @@ const TrendingBoard = () => {
         <div className="reply_container">
           <div className="item">
             <div className="user_info">
-              <FaCircleUser style={{ width: "1.5rem", height: "1.5rem" }} />
+              <FaCircleUser />
               <p>대주주・1월 22일</p>
             </div>
             <p>
@@ -43,7 +43,7 @@ const TrendingBoard = () => {
           </div>
           <div className="item">
             <div className="user_info">
-              <FaCircleUser style={{ width: "1.5rem", height: "1.5rem" }} />
+              <FaCircleUser />
               <p>대주주・1월 22일</p>
             </div>
             <p>

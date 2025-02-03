@@ -22,11 +22,15 @@
   border-radius: 0.25rem;
 }
 
+.news_container .content .item p {
+  font-size: 0.9rem;
+}
+
 .news_container .content .news_info {
   padding: 0.25rem 0;
 
   color: var(--primary-deactivate-font-color);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .news_container .remote_container {

@@ -4,8 +4,9 @@ import { FaBuildingUser } from "react-icons/fa6";
 import { IoFilter } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoMdRefresh } from "react-icons/io";
-import "../../assets/css/stock/stock_list.css";
-import KoreaFlag from "../../assets/images/korea_flag.svg";
+import { LiaArrowsAltVSolid } from "react-icons/lia";
+import "@assets/css/stock/stock_list.css";
+import KoreaFlag from "@assets/images/korea_flag.svg";
 const StockList = () => {
   return (
     <div className="stock_list_container">
@@ -137,10 +138,10 @@ const StockList = () => {
           <thead>
             <tr>
               <th>
-                <div>
+                <button>
                   <span>검색된 주식</span>・<span>100개</span>
                   <IoMdRefresh />
-                </div>
+                </button>
               </th>
               <th>
                 <div>
@@ -159,12 +160,18 @@ const StockList = () => {
               </th>
               <th>
                 <div>
-                  <span>시가총액</span>
+                  <button>
+                    <span>시가총액</span>
+                    <LiaArrowsAltVSolid />
+                  </button>
                 </div>
               </th>
               <th>
                 <div>
-                  <span>거래량</span>
+                  <button>
+                    <span>거래량</span>
+                    <LiaArrowsAltVSolid />
+                  </button>
                 </div>
               </th>
             </tr>
@@ -172,10 +179,12 @@ const StockList = () => {
           <tbody>
             <tr>
               <td>
-                <div>
-                  <FaHeart />
-                  <span>1</span>
-                  <div>
+                <div className="stock_info_container">
+                  <button className="like_btn_img_box">
+                    <FaHeart />
+                  </button>
+                  <span className="number">1</span>
+                  <div className="info">
                     <FaBuildingUser />
                     <span>애플</span>
                   </div>
@@ -187,7 +196,7 @@ const StockList = () => {
                 </div>
               </td>
               <td>
-                <div className="down">
+                <div className="fluctuating_value_rate down">
                   <span>-2.5%</span>
                   <span>-8300원</span>
                 </div>
@@ -195,6 +204,46 @@ const StockList = () => {
               <td>
                 <div>
                   <span>스마트폰 제조</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>5,086.7조원</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>101,075,128주</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div className="stock_info_container">
+                  <button className="like_btn_img_box">
+                    <FaHeart />
+                  </button>
+                  <span className="number">2</span>
+                  <div className="info">
+                    <FaBuildingUser />
+                    <span>몬테 로사 테라퓨틱스</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>333,383원</span>
+                </div>
+              </td>
+              <td>
+                <div className="fluctuating_value_rate up">
+                  <span>+8.7%</span>
+                  <span>+300원</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>바이오 신약</span>
                 </div>
               </td>
               <td>
