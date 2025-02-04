@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../assets/css/home/section02/section02.css";
+import "@assets/css/home/section02/section02.css";
 import Login from "../section02/login/Login";
 import StockIndex from "../section02/stock_index/StockIndex";
 const Section02 = () => {

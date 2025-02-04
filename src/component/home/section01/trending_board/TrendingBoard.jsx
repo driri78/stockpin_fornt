@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../assets/css/home/section01/trendingBoard.css";
+import "@assets/css/home/section01/trendingBoard.css";
 import { FaFireAlt } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { FaCircleUser } from "react-icons/fa6";

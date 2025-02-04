@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
-import "../../../../assets/css/home/section02/StockIndex.css";
+import "@assets/css/home/section02/StockIndex.css";
 
 const StockIndex = () => {
   useEffect(() => {

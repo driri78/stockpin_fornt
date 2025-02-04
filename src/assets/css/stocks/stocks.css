@@ -1,7 +1,7 @@
 .stock_list_container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -28,12 +28,15 @@
 .stockPin_create_filter_box ul li > h4 {
   margin: 0.25rem 0;
   padding: 0.75rem 0.5rem;
-  border-radius: 0.5rem;
-
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--primary-placeholder-font-color);
+}
 
+.user_create_filter_box ul li,
+.stockPin_create_filter_box ul li > h4 {
+  line-height: 1rem;
+  border-radius: 0.5rem;
   transition: 0.2s;
 
   cursor: pointer;
@@ -45,6 +48,7 @@
 }
 
 .user_create_filter_box button {
+  padding: 2px 0;
   color: var(--primary-color);
   font-weight: bold;
   font-size: 0.9rem;
@@ -109,6 +113,10 @@
   width: calc(100% - 220px - 40px);
 }
 
+.filter_title_container {
+  margin-bottom: 2rem;
+}
+
 .filter_title_container h3 {
   margin: 0.5rem 0;
   color: var(--primary-content-font-color);
@@ -117,7 +125,7 @@
 
 .filter_title_container p {
   color: var(--primary-deactivate-font-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .filter_list_container ul {
@@ -138,6 +146,12 @@
 .filter_list_container ul li .filter_icon_box svg {
   width: 1rem;
   height: 1rem;
+}
+
+.filter_list_container ul li .filter_info_box {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
 }
 
 .filter_list_container ul li .flag_img_box {
@@ -170,16 +184,21 @@
 }
 
 .filter_list_container ul li button {
-  box-sizing: content-box;
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary-filter-button-backgoundcolor);
 
-  color: var(--primary-content-font-color);
+  color: var(--primary-deactivate-font-color);
   font-weight: bold;
+
+  transition: 0.2s;
 
   display: flex;
   align-items: center;
+}
+
+.filter_list_container ul li button:hover {
+  background-color: var(--primary-filter-hover-backgoundcolor);
 }
 
 .filter_list_container ul li button span {
@@ -208,10 +227,16 @@
   font-size: 0.8rem;
 }
 
+.filter_stock_list_container th span,
+.filter_stock_list_container td span {
+  padding: 0 0.2rem;
+}
+
 .filter_stock_list_container th,
 .filter_stock_list_container td {
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
 }
+
 .filter_stock_list_container th:not(:first-of-type) > div,
 .filter_stock_list_container td:not(:first-of-type) > div {
   display: flex;
@@ -219,7 +244,7 @@
 }
 
 .filter_stock_list_container th button {
-  padding: 0.2rem;
+  padding: 0.25rem;
   border-radius: 0.5rem;
 
   font-weight: bold;
@@ -241,8 +266,8 @@
 }
 
 .filter_stock_list_container .stock_info_container .like_btn_img_box {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.75rem;
+  height: 0.75rem;
 
   color: var(--primary-placeholder-font-color);
 

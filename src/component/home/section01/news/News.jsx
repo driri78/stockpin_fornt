@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../assets/css/home/section01/news.css";
+import "@assets/css/home/section01/news.css";
 
 const News = () => {
   return (

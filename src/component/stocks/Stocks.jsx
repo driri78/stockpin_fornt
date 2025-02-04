@@ -5,9 +5,14 @@ import { IoFilter } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoMdRefresh } from "react-icons/io";
 import { LiaArrowsAltVSolid } from "react-icons/lia";
-import "@assets/css/stock/stock_list.css";
+import "@assets/css/stocks/stocks.css";
 import KoreaFlag from "@assets/images/korea_flag.svg";
-const StockList = () => {
+import { useNavigate } from "react-router-dom";
+const Stocks = () => {
+  const navigate = useNavigate();
+  const goDetail = (id) => {
+    navigate(`/stock/${id}/price`);
+  };
   return (
     <div className="stock_list_container">
       <aside>
@@ -90,10 +95,12 @@ const StockList = () => {
             </li>
             <li>
               <button>
-                <div className="flag_img_box">
-                  <KoreaFlag />
+                <div className="filter_info_box">
+                  <div className="flag_img_box">
+                    <KoreaFlag />
+                  </div>
+                  <span>국내</span>
                 </div>
-                <span>국내</span>
                 <div className="arrow_down_img_box">
                   <MdKeyboardArrowDown />
                 </div>
@@ -177,7 +184,7 @@ const StockList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr onClick={() => goDetail(1)}>
               <td>
                 <div className="stock_info_container">
                   <button className="like_btn_img_box">
@@ -217,7 +224,7 @@ const StockList = () => {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr onClick={() => goDetail(2)}>
               <td>
                 <div className="stock_info_container">
                   <button className="like_btn_img_box">
@@ -264,4 +271,4 @@ const StockList = () => {
   );
 };
 
-export default StockList;
+export default Stocks;

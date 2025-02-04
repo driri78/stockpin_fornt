@@ -41,6 +41,7 @@
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
   --primary-hover-backgoundcolor: #0220470d;
+  --primary-filter-hover-backgoundcolor: #ddd;
   --primary-filter-button-backgoundcolor: #0220470d;
   --primary-image-box-size: 2rem;
 }

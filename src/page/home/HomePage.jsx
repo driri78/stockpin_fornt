@@ -1,7 +1,7 @@
 import React from "react";
-import "../../assets/css/home/home.css";
-import Section01 from "../../component/home/section01/Section01";
-import Section02 from "../../component/home/section02/Section02";
+import "@assets/css/home/home.css";
+import Section01 from "@component/home/section01/Section01";
+import Section02 from "@component/home/section02/Section02";
 
 const HomePage = () => {
   return (
