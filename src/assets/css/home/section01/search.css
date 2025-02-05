@@ -1,0 +1,188 @@
+.search_container {
+  width: 100%;
+  padding: 2rem;
+  padding-right: 3rem;
+}
+
+.search_container .input_box {
+  height: 2.75rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  background-color: #0220470d;
+  border-radius: 3rem;
+
+  position: relative;
+}
+
+.search_container .input_box label {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  color: #aaa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search_container .input_box input {
+  font-size: 1.1rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.search_container .content .title {
+  padding-bottom: 1.25rem;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.search_container .content .title h2 {
+  font-size: 1.3rem;
+}
+
+.search_container .content .title span {
+  font-size: 0.9rem;
+  color: var(--primary-deactivate-font-color);
+}
+
+.search_container .content .explanation {
+  padding-bottom: 1rem;
+  color: var(--primary-deactivate-font-color);
+  font-size: 14px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.search_container .content .rank {
+  color: var(--primary-content-font-color);
+}
+
+.search_container .content .rank li:first-of-type {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.search_container .content .rank li {
+  padding: 0.75rem;
+
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.search_container .content .rank li:not(:first-of-type) {
+  border-radius: 1rem;
+}
+
+.search_container .content .rank li:not(:first-of-type):hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.search_container .content .rank li:first-of-type {
+  font-weight: bold;
+}
+
+.search_container .content .stocks {
+  width: 46%;
+  font-weight: bold;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search_container .content .stocks .like_btn_img_box {
+  margin-left: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+
+  color: var(--primary-placeholder-font-color);
+
+  cursor: pointer;
+}
+
+.search_container .content .stocks .like_btn_img_box svg {
+  width: 100%;
+  height: 100%;
+}
+
+.search_container .content .stocks .name svg {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  cursor: default;
+}
+
+.search_container .content .stocks .name {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.search_container .content .number {
+  width: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.search_container .content .value,
+.search_container .content .fluctuating_value_rate,
+.search_container .content .trading_volume {
+  width: 18%;
+  text-align: right;
+}
+
+.paging_container {
+  padding: 1.5rem 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.paging_container ul {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.paging_container ul li {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 1.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.paging_container ul li.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.paging_container .img_box {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

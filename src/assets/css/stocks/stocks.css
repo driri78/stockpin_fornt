@@ -1,0 +1,333 @@
+.stock_list_container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock_list_container aside {
+  min-width: 220px;
+}
+
+.stock_list_container aside h2 {
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.stock_list_container aside h3 {
+  margin: 2.5rem 0.1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: var(--primary-deactivate-font-color);
+}
+
+.user_create_filter_box ul li:not(:last-of-type),
+.stockPin_create_filter_box ul li > h4 {
+  margin: 0.25rem 0;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-placeholder-font-color);
+}
+
+.user_create_filter_box ul li,
+.stockPin_create_filter_box ul li > h4 {
+  line-height: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.user_create_filter_box ul li:hover,
+.stockPin_create_filter_box ul li > h4:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.user_create_filter_box button {
+  padding: 2px 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.user_create_filter_box .img_box {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stockPin_create_filter_box ul li > h4.active {
+  color: var(--primary-content-font-color);
+  font-weight: bold;
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.stockPin_create_filter_box ul li {
+  position: relative;
+}
+
+.stockPin_create_filter_box ul li:hover .hover_content_box {
+  display: block;
+}
+
+.stockPin_create_filter_box .hover_content_box {
+  display: none;
+
+  padding-left: 0.5rem;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.stockPin_create_filter_box .hover_content_box > div {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 19px #b3b3b366;
+
+  color: var(--primary-content-font-color);
+  white-space: nowrap;
+}
+
+.stockPin_create_filter_box .hover_content_box span {
+  color: var(--primary-content-font-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.stockPin_create_filter_box .hover_content_box p {
+  color: var(--primary-placeholder-font-color);
+  padding: 0.25rem 0;
+}
+
+.stock_list_container main {
+  width: calc(100% - 220px - 40px);
+}
+
+.filter_title_container {
+  margin-bottom: 2rem;
+}
+
+.filter_title_container h3 {
+  margin: 0.5rem 0;
+  color: var(--primary-content-font-color);
+  font-size: 1.75rem;
+}
+
+.filter_title_container p {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+}
+
+.filter_list_container ul {
+  margin: 0.75rem 0;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.filter_list_container ul li .filter_icon_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_list_container ul li .filter_icon_box svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.filter_list_container ul li .filter_info_box {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.filter_list_container ul li .flag_img_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_list_container ul li .flag_img_box svg {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+}
+
+.filter_list_container ul li .arrow_down_img_box {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter_list_container ul li .arrow_down_img_box svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.filter_list_container ul li button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-filter-button-backgoundcolor);
+
+  color: var(--primary-deactivate-font-color);
+  font-weight: bold;
+
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+}
+
+.filter_list_container ul li button:hover {
+  background-color: var(--primary-filter-hover-backgoundcolor);
+}
+
+.filter_list_container ul li button span {
+  white-space: nowrap;
+}
+
+.filter_stock_list_container {
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.filter_stock_list_container,
+.filter_stock_list_container th,
+.filter_stock_list_container td {
+  border: 0px solid transparent;
+  border-collapse: collapse;
+  color: var(--primary-content-font-color);
+}
+
+.filter_stock_list_container th:first-of-type {
+  padding-left: 0;
+}
+
+.filter_stock_list_container th {
+  font-size: 0.8rem;
+}
+
+.filter_stock_list_container th span,
+.filter_stock_list_container td span {
+  padding: 0 0.2rem;
+}
+
+.filter_stock_list_container th,
+.filter_stock_list_container td {
+  padding: 0.5rem 1rem;
+}
+
+.filter_stock_list_container th:not(:first-of-type) > div,
+.filter_stock_list_container td:not(:first-of-type) > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter_stock_list_container th button {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.filter_stock_list_container th button:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.filter_stock_list_container th button svg {
+  margin-left: 0.25rem;
+}
+
+.filter_stock_list_container .stock_info_container {
+  display: flex;
+  align-items: center;
+}
+
+.filter_stock_list_container .stock_info_container .like_btn_img_box {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  color: var(--primary-placeholder-font-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_stock_list_container .stock_info_container .number {
+  margin: 0 1.5rem;
+
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.filter_stock_list_container .stock_info_container .info {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.filter_stock_list_container .stock_info_container .info svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.filter_stock_list_container .stock_info_container .info span {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.filter_stock_list_container tbody tr:nth-of-type(2n + 1) td {
+  background-color: #02204708;
+}
+
+.filter_stock_list_container tbody tr td:first-of-type {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.filter_stock_list_container tbody tr td:last-of-type {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.filter_stock_list_container tbody tr {
+  cursor: pointer;
+}
+
+.filter_stock_list_container tbody tr:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.filter_stock_list_container tbody .fluctuating_value_rate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.filter_stock_list_container tbody .fluctuating_value_rate span:nth-of-type(2) {
+  font-size: 0.75rem;
+}

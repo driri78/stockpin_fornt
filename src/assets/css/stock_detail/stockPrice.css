@@ -1,0 +1,38 @@
+.stock_price_container {
+  width: 80%;
+  height: 722px;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stock_price_content01 {
+  width: 75%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stock_going_rate_container,
+.stock_price_content02 {
+  border: 1px solid #000;
+}
+
+.stock_chart_container {
+  padding: 0.5rem;
+  height: 50%;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.stock_going_rate_container {
+  height: 50%;
+}
+
+.stock_price_content02 {
+  width: 25%;
+  height: 100%;
+}

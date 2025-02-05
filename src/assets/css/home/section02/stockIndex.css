@@ -1,0 +1,45 @@
+.stock_index_container {
+  padding: 3rem;
+}
+
+.stock_index_container ul {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.stock_index_container ul li {
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+
+.stock_index_container ul li h2 {
+  font-size: 0.9rem;
+}
+
+.stock_index_container ul li.active {
+  background-color: #0220470d;
+  font-weight: bold;
+}
+
+.stock_index_container .content .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.stock_index_container .content .item .info h3 {
+  padding: 0.25rem 0;
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+}
+
+.stock_index_container .content .item .info .value {
+  padding: 0.25rem 0;
+  display: flex;
+  gap: 0.25rem;
+
+  font-size: 0.9rem;
+}
