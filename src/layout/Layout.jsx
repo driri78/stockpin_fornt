@@ -7,9 +7,13 @@ const Layout = () => {
   return (
     <div>
       <Header />
+<<<<<<< HEAD
       <main>
         <Outlet />
       </main>
+=======
+      <Outlet />
+>>>>>>> d1e65804657ad71cfe85e53a9f607d6e922be652
       <Footer />
     </div>
   );

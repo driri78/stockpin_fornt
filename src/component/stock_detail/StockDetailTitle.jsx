@@ -6,7 +6,7 @@ const StockDetailTitle = () => {
   const { stockId } = useParams();
 
   return (
-    <section>
+    <div>
       <div className="stock_detail_title_container">
         <div className="icon_box">
           <FaBuildingUser />
@@ -42,7 +42,7 @@ const StockDetailTitle = () => {
           <Link to={`/stock/${stockId}/ai`}>ai 분석</Link>
         </li>
       </ul>
-    </section>
+    </div>
   );
 };
 
