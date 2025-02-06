@@ -1,9 +1,13 @@
+.stock_price_content02 {
+  border: 1px solid #000;
+}
+
 .stock_price_container {
   width: 80%;
   height: 722px;
 
   display: flex;
-  gap: 0.5rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
@@ -13,12 +17,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.stock_going_rate_container,
-.stock_price_content02 {
-  border: 1px solid #000;
+  gap: 0.75rem;
 }
 
 .stock_chart_container {
@@ -30,6 +29,77 @@
 
 .stock_going_rate_container {
   height: 50%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  background-color: #fff;
+}
+
+.stock_going_rate_container h3 {
+  margin: 0.5rem;
+
+  color: var(--primary-font-color);
+  font-size: 0.9rem;
+}
+
+.stock_going_rate_container ul {
+  padding: 0.2rem;
+  background-color: var(--primary-button-backgoundcolor);
+  border-radius: 0.3rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.stock_going_rate_container ul li {
+  width: 50%;
+  padding: 0.25rem 1rem;
+  border-radius: 0.3rem;
+
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.stock_going_rate_container ul li.active {
+  box-shadow: 0px 0px 5px #ddd;
+  background-color: #fff;
+}
+
+.stock_going_rate_container table {
+  width: 100%;
+
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.8rem;
+}
+
+.stock_going_rate_container table,
+.stock_going_rate_container th,
+.stock_going_rate_container td {
+  border-collapse: collapse;
+}
+
+.stock_going_rate_container table th:first-of-type,
+.stock_going_rate_container table td:first-of-type {
+  text-align: left;
+  padding-left: 0.75rem;
+}
+
+.stock_going_rate_container table th,
+.stock_going_rate_container table td {
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.stock_going_rate_container table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.stock_going_rate_container table th {
+  padding: 1rem 0.5rem;
 }
 
 .stock_price_content02 {

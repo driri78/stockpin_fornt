@@ -9,8 +9,9 @@ const StockPrice = () => {
           <StockPriceChart />
         </div>
         <div className="stock_going_rate_container">
+          <h3>일별 · 실시간 시세</h3>
           <ul>
-            <li>실시간</li>
+            <li className="active">실시간</li>
             <li>일별</li>
           </ul>
           <table>
@@ -24,6 +25,104 @@ const StockPrice = () => {
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
+              <tr>
+                <td>339,562원</td>
+                <td className="up">1</td>
+                <td className="down">-0.15%</td>
+                <td>13,884</td>
+                <td>14:17:32</td>
+              </tr>
               <tr>
                 <td>339,562원</td>
                 <td className="up">1</td>

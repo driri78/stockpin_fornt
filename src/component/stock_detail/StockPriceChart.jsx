@@ -260,6 +260,16 @@ const StockPriceChart = () => {
     options: {
       chart: {
         type: "candlestick",
+        zoom: {
+          enabled: true,
+          type: "x",
+        },
+        pan: {
+          enabled: true,
+          type: "x",
+          panSpeed: 1,
+          modifierKey: "shift",
+        },
         height: 100,
         toolbar: {
           show: true,
@@ -271,7 +281,6 @@ const StockPriceChart = () => {
             zoom: false,
             zoomin: false,
             zoomout: false,
-            pan: true,
             reset: true | '<img src="/static/icons/reset.png" width="20">',
           },
           autoSelected: "pan",
