@@ -22,7 +22,7 @@
 
 .stock_chart_container {
   padding: 0.5rem;
-  height: 50%;
+  height: calc(50% - 0.75rem);
   border-radius: 1rem;
   background-color: #fff;
 }
@@ -69,6 +69,16 @@
   background-color: #fff;
 }
 
+.stock_going_rate_container .going_rate_table_wrap {
+  height: calc(100% - 32px - 18px - 8px - 1rem);
+  margin: 0.5rem 0;
+
+  position: relative;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
 .stock_going_rate_container table {
   width: 100%;
 
@@ -76,10 +86,9 @@
   font-size: 0.8rem;
 }
 
-.stock_going_rate_container table,
-.stock_going_rate_container th,
-.stock_going_rate_container td {
-  border-collapse: collapse;
+.stock_going_rate_container table {
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .stock_going_rate_container table th:first-of-type,
@@ -94,12 +103,16 @@
   padding: 0.5rem;
 }
 
-.stock_going_rate_container table thead tr {
-  border-bottom: 1px solid #ddd;
+.stock_going_rate_container table thead {
+  background-color: #fff;
+
+  position: sticky;
+  top: 0;
 }
 
 .stock_going_rate_container table th {
   padding: 1rem 0.5rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .stock_price_content02 {
