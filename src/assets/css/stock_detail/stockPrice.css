@@ -135,26 +135,101 @@
   font-size: 0.9rem;
 }
 
-.stock_quote_container .rise_price_container {
-  display: flex;
+.stock_quote_container .content {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.stock_quote_container .price_container {
+  min-width: 330px;
+
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+  grid-template-areas:
+    "sellOrder sellOrder info"
+    "centerDivider centerDivider centerDivider"
+    "tradingStrength buyOrder buyOrder";
+  overflow-anchor: none;
+
+  border-bottom: 2px solid var(--primary-light-border-color);
+}
+
+.stock_quote_container .price_container.rise ul {
+  grid-area: sellOrder;
+  align-self: end;
+}
+
+.stock_quote_container .price_container.decline ul {
+  grid-area: buyOrder;
+  align-self: end;
+}
+
+.stock_quote_container .price_container.rise .price_info_contianer {
+  display: grid;
+  grid-template-columns: minmax(10px, 3fr) minmax(10px, 4fr);
   align-items: center;
 }
 
-.stock_quote_container .rise_price_container ul {
-  width: calc(100% / 3 * 2);
-}
-
-.stock_quote_container .rise_price_container .price_info_contianer {
-  display: flex;
+.stock_quote_container .price_container.decline .price_info_contianer {
+  display: grid;
+  grid-template-columns: minmax(10px, 4fr) minmax(10px, 3fr);
   align-items: center;
 }
 
-.stock_quote_container .rise_price_container .transaction_price_box {
-  width: 40%;
+.stock_quote_container .price_container .transaction_price_box {
+  position: relative;
 }
 
-.stock_quote_container .rise_price_container .fluctuation_rate_box {
-  width: 60%;
+.stock_quote_container .price_container .transaction_price_box span {
+  font-size: 0.75rem;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 2;
+}
+
+.stock_quote_container .price_container.rise .transaction_price_box span {
+  right: 0.5rem;
+}
+
+.stock_quote_container .price_container.decline .transaction_price_box span {
+  left: 0.5rem;
+}
+
+.stock_quote_container .price_container .transaction_price_box .progress_bar {
+  height: 1.5rem;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 1;
+}
+
+.stock_quote_container
+  .price_container.rise
+  .transaction_price_box
+  .progress_bar {
+  background-color: #e8f3ff;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  right: 0;
+}
+
+.stock_quote_container
+  .price_container.decline
+  .transaction_price_box
+  .progress_bar {
+  background-color: #ffeeee;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+
+  left: 0;
+}
+
+.stock_quote_container .price_container .fluctuation_rate_box {
   padding: 1rem;
   border-right: 1px solid var(--primary-light-border-color);
   border-left: 1px solid var(--primary-light-border-color);
@@ -167,26 +242,46 @@
 }
 
 .stock_quote_container
-  .rise_price_container
+  .price_container
   .fluctuation_rate_box
   span:first-of-type {
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.stock_quote_container .rise_price_container .stock_price_info_container {
-  width: calc(100% / 3);
+.stock_quote_container
+  .price_container
+  .fluctuation_rate_box
+  span:last-of-type {
+  font-size: 0.75rem;
+}
+
+.stock_quote_container .price_container .stock_price_info_container {
+  padding: 0 0.5rem;
 
   color: var(--primary-deactivate-font-color);
   font-size: 0.75rem;
   font-weight: 500;
 }
 
+.stock_quote_container .price_container .stock_price_info_container .info_box {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--primary-light-border-color);
+}
+
+.stock_quote_container .price_container.rise .stock_price_info_container {
+  grid-area: info;
+}
+
+.stock_quote_container .price_container.decline .stock_price_info_container {
+  grid-area: tradingStrength;
+}
+
 .stock_quote_container
-  .rise_price_container
+  .price_container
   .stock_price_info_container
-  .info_box {
-  display: flex;
-  flex-direction: column;
+  .info_box:last-of-type {
+  border-bottom: none;
 }
 
 .stock_quote_container .footer {

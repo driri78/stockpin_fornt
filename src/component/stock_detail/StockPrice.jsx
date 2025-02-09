@@ -156,13 +156,16 @@ const StockPrice = () => {
             </div>
           </div>
           <div className="content">
-            <div className="rise_price_container">
+            <div className="rise price_container">
               <ul>
                 <li>
                   <div className="price_info_contianer">
                     <div className="transaction_price_box">
-                      <span>114</span>
-                      <div></div>
+                      <span className="down">114</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "12px" }}
+                      ></div>
                     </div>
                     <div className="fluctuation_rate_box down">
                       <span>337,500</span>
@@ -173,8 +176,11 @@ const StockPrice = () => {
                 <li>
                   <div className="price_info_contianer">
                     <div className="transaction_price_box">
-                      <span>68</span>
-                      <div></div>
+                      <span className="down">68</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "6px" }}
+                      ></div>
                     </div>
                     <div className="fluctuation_rate_box down">
                       <span>337,000</span>
@@ -185,8 +191,11 @@ const StockPrice = () => {
                 <li>
                   <div className="price_info_contianer">
                     <div className="transaction_price_box">
-                      <span>58</span>
-                      <div></div>
+                      <span className="down">58</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "5px" }}
+                      ></div>
                     </div>
                     <div className="fluctuation_rate_box down">
                       <span>336,500</span>
@@ -197,32 +206,141 @@ const StockPrice = () => {
               </ul>
               <div className="stock_price_info_container">
                 <div className="info_box">
-                  <span>상한가 444,500</span>
-                  <span>하한가 239,500</span>
-                  <span>상승VI 376,000</span>
-                  <span>하강VI 307,000</span>
+                  <div>
+                    <span>상한가</span>
+                    <span>444,500</span>
+                  </div>
+                  <div>
+                    <span>하한가</span>
+                    <span>239,500</span>
+                  </div>
+                  <div>
+                    <span>상승VI</span>
+                    <span>376,000</span>
+                  </div>
+                  <div>
+                    <span>하강VI</span>
+                    <span>307,000</span>
+                  </div>
                 </div>
                 <div className="info_box">
-                  <span>시작 341,500</span>
-                  <span className="up">최고 345,000</span>
-                  <span className="down">최저 336,000</span>
+                  <div>
+                    <span>시작</span>
+                    <span>341,500</span>
+                  </div>
+                  <div>
+                    <span>최고</span>
+                    <span className="up">345,000</span>
+                  </div>
+                  <div>
+                    <span>최저</span>
+                    <span className="down">336,000</span>
+                  </div>
                 </div>
                 <div className="info_box">
-                  <span>거래량 119,390</span>
-                  <span>어제보다 92.45%</span>
+                  <div>
+                    <span>거래량</span>
+                    <span>119,390</span>
+                  </div>
+                  <div>
+                    <span>어제보다</span>
+                    <span>92.45%</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div>
+            <div className="decline price_container">
+              <div className="stock_price_info_container">
+                <div className="info_box">
+                  <div>
+                    <span>상한가</span>
+                    <span>444,500</span>
+                  </div>
+                  <div>
+                    <span>하한가</span>
+                    <span>239,500</span>
+                  </div>
+                  <div>
+                    <span>상승VI</span>
+                    <span>376,000</span>
+                  </div>
+                  <div>
+                    <span>하강VI</span>
+                    <span>307,000</span>
+                  </div>
+                </div>
+                <div className="info_box">
+                  <div>
+                    <span>시작</span>
+                    <span>341,500</span>
+                  </div>
+                  <div>
+                    <span>최고</span>
+                    <span className="up">345,000</span>
+                  </div>
+                  <div>
+                    <span>최저</span>
+                    <span className="down">336,000</span>
+                  </div>
+                </div>
+                <div className="info_box">
+                  <div>
+                    <span>거래량</span>
+                    <span>119,390</span>
+                  </div>
+                  <div>
+                    <span>어제보다</span>
+                    <span>92.45%</span>
+                  </div>
+                </div>
+              </div>
               <ul>
                 <li>
-                  <div>
-                    <div></div>
-                    <div></div>
+                  <div className="price_info_contianer">
+                    <div className="fluctuation_rate_box down">
+                      <span>337,500</span>
+                      <span>-1.31%</span>
+                    </div>
+                    <div className="transaction_price_box">
+                      <span className="up">114</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "12px" }}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="price_info_contianer">
+                    <div className="fluctuation_rate_box down">
+                      <span>337,000</span>
+                      <span>-1.46%</span>
+                    </div>
+                    <div className="transaction_price_box">
+                      <span className="up">68</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "6px" }}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="price_info_contianer">
+                    <div className="fluctuation_rate_box down">
+                      <span>336,500</span>
+                      <span>-1.60%</span>
+                    </div>
+                    <div className="transaction_price_box">
+                      <span className="up">58</span>
+                      <div
+                        className="progress_bar"
+                        style={{ width: "5px" }}
+                      ></div>
+                    </div>
                   </div>
                 </li>
               </ul>
-              <div></div>
             </div>
           </div>
           <div className="footer">
