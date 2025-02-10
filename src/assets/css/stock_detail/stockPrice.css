@@ -117,7 +117,7 @@
 }
 
 .stock_quote_container {
-  min-height: 100%;
+  height: 100%;
   padding: 0.5rem;
   background-color: #fff;
 
@@ -125,33 +125,43 @@
 }
 
 .stock_quote_container .header {
-  border-bottom: 1px solid var(--primary-light-border-color);
+  line-height: 32px;
 }
 
 .stock_quote_container h3 {
-  margin: 0.5rem;
-
   color: var(--primary-font-color);
   font-size: 0.9rem;
 }
 
-.stock_quote_container .content {
+.stock_quote_container .content_wrap {
+  border-top: 1px solid var(--primary-light-border-color);
+
+  height: calc(100% - 32px);
   overflow: auto;
   scrollbar-width: thin;
 }
 
+.stock_quote_container .content {
+  position: relative;
+}
+
 .stock_quote_container .price_container {
   min-width: 330px;
+  min-height: 333px;
 
   display: grid;
   grid-template-columns: 3fr 4fr 3fr;
-  grid-template-areas:
-    "sellOrder sellOrder info"
-    "centerDivider centerDivider centerDivider"
-    "tradingStrength buyOrder buyOrder";
-  overflow-anchor: none;
 
+  overflow-anchor: none;
+}
+
+.stock_quote_container .price_container.rise {
+  grid-template-areas: "sellOrder sellOrder info";
   border-bottom: 2px solid var(--primary-light-border-color);
+}
+
+.stock_quote_container .price_container.decline {
+  grid-template-areas: "tradingStrength buyOrder buyOrder";
 }
 
 .stock_quote_container .price_container.rise ul {
@@ -161,7 +171,6 @@
 
 .stock_quote_container .price_container.decline ul {
   grid-area: buyOrder;
-  align-self: end;
 }
 
 .stock_quote_container .price_container.rise .price_info_contianer {
@@ -230,15 +239,22 @@
 }
 
 .stock_quote_container .price_container .fluctuation_rate_box {
-  padding: 1rem;
-  border-right: 1px solid var(--primary-light-border-color);
-  border-left: 1px solid var(--primary-light-border-color);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
 
   font-size: 0.9rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
+  z-index: 999;
+}
+
+.stock_quote_container .price_container .fluctuation_rate_box.active {
+  border: 1px solid var(--primary-border-color);
 }
 
 .stock_quote_container
@@ -257,7 +273,7 @@
 }
 
 .stock_quote_container .price_container .stock_price_info_container {
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
 
   color: var(--primary-deactivate-font-color);
   font-size: 0.75rem;
@@ -267,10 +283,43 @@
 .stock_quote_container .price_container .stock_price_info_container .info_box {
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--primary-light-border-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stock_quote_container
+  .price_container
+  .stock_price_info_container
+  .info_box
+  > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock_quote_container
+  .price_container
+  .stock_price_info_container
+  .info_box
+  > div.title {
+  font-weight: bold;
+  margin-bottom: 0.15rem;
 }
 
 .stock_quote_container .price_container.rise .stock_price_info_container {
   grid-area: info;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.stock_quote_container
+  .price_container.rise
+  .stock_price_info_container
+  .info_box:last-of-type {
+  padding-bottom: 1rem;
 }
 
 .stock_quote_container .price_container.decline .stock_price_info_container {
@@ -278,10 +327,35 @@
 }
 
 .stock_quote_container
+  .price_container.decline
+  .stock_price_info_container
+  .info_box {
+  padding-top: 1rem;
+}
+
+.stock_quote_container
   .price_container
   .stock_price_info_container
   .info_box:last-of-type {
   border-bottom: none;
+}
+
+.content .left_border,
+.content .right_border {
+  height: 100%;
+  border-right: 1px solid var(--primary-light-border-color);
+
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.content .left_border {
+  left: 30%;
+}
+
+.content .right_border {
+  left: 70%;
 }
 
 .stock_quote_container .footer {
