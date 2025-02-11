@@ -1,6 +1,6 @@
 .stock_price_container {
   width: 80%;
-  height: 722px;
+  height: 100%;
 
   display: flex;
   gap: 0.75rem;

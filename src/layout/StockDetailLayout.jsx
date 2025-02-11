@@ -1,5 +1,5 @@
 import Header from "@/component/header/Header";
-import StockTransaction from "@/component/stock_detail/StockTransaction";
+import StockOrder from "@/component/stock_detail/StockOrder";
 import StockDetailTitle from "@component/stock_detail/StockDetailTitle";
 import "@assets/css/layout/stock_detail_layout.css";
 import React from "react";
@@ -13,7 +13,7 @@ const StockDetailLayout = () => {
       <section>
         <div className="stock_content_container">
           <Outlet />
-          <StockTransaction />
+          <StockOrder />
         </div>
       </section>
     </>
