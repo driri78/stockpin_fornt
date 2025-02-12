@@ -1,4 +1,4 @@
-import StockPrice from "@/component/stock_detail/StockPrice";
+import StockPrice from "@/component/stock_detail/price/StockPrice";
 import React from "react";
 
 const StockPricePage = () => {

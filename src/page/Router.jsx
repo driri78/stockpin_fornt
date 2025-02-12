@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./home/HomePage";
+import StocksPage from "./stock/StocksPage";
 import {
-  StocksPage,
   StockPricePage,
   StockInfoPage,
   StockCommunityPage,

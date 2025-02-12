@@ -1,6 +1,6 @@
 import React from "react";
 import "@assets/css/stock_detail/stockOrder.css";
-const StockOrder = () => {
+const StockOrderKorea = () => {
   return (
     <div className="stock_order_container">
       <div className="header">
@@ -19,22 +19,20 @@ const StockOrder = () => {
               <div>일반 주문</div>
               <div>
                 <div>일반 주문</div>
-                <div>LOC 주문</div>
                 <div>조건 주문</div>
               </div>
             </div>
           </div>
           <div>
-            <span>주문 방법</span>
-            <div>
-              <ul>
-                <li>수량</li>
-                <li>소수점</li>
-              </ul>
-            </div>
-          </div>
-          <div>
             <span>구매가격</span>
+            <div>
+              <div>
+                <button>지정가</button>
+              </div>
+              <div>
+                <button>시장가</button>
+              </div>
+            </div>
           </div>
           <div>
             <span>수량</span>
@@ -64,4 +62,4 @@ const StockOrder = () => {
   );
 };
 
-export default StockOrder;
+export default StockOrderKorea;

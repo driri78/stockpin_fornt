@@ -1,0 +1,47 @@
+.stock_info_container {
+  width: 100%;
+  min-width: 930px;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+
+  background-color: #fff;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.stock_info_container nav {
+  min-width: 130px;
+  width: 14%;
+}
+
+.stock_info_container nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.stock_info_container nav ul li:not(:first-of-type) {
+  margin-left: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.stock_info_container nav ul li {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+
+  color: var();
+  font-size: 0.9rem;
+}
+
+.stock_info_container nav ul li.active {
+  background-color: var(--primary-hover-backgoundcolor);
+  font-weight: bold;
+}
+
+.stock_info_container .content {
+  width: 77%;
+  min-width: 700px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "@assets/css/stock_detail/stockPrice.css";
+import "@assets/css/stock_detail/price/stockPrice.css";
 import StockPriceChart from "./StockPriceChart";
 const StockPrice = () => {
   return (
