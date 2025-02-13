@@ -31,21 +31,26 @@
 :root {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   --primary-color: #ee137b;
+
   --primary-home-border-color: #eee;
   --primary-border-color: #212121;
   --primary-light-border-color: #ddd;
+
   --primary-font-color: #212121;
-  --primary-button-backgoundcolor: #0220470d;
   --primary-content-font-color: #333d4b;
-  --primary-hover-font-color: #ee137b;
-  --primary-placeholder-font-color: #aaa;
+  --primary-light-content-font-color: #4e5968;
   --primary-deactivate-font-color: #6b7684;
-  --primary-up-font-color: #f04452;
+  --primary-placeholder-font-color: #aaa;
+  --primary-hover-font-color: #ee137b;
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
+
+  --primary-content-backgoundcolor: #02204707;
+  --primary-button-backgoundcolor: #0220470d;
   --primary-hover-backgoundcolor: #0220470d;
   --primary-filter-hover-backgoundcolor: #ddd;
   --primary-filter-button-backgoundcolor: #0220470d;
+
   --primary-image-box-size: 2rem;
 }
 
@@ -57,7 +62,7 @@
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary-down-font-color);
 }
 
 li {
