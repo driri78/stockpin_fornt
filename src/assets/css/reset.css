@@ -62,7 +62,7 @@
 
 a {
   text-decoration: none;
-  color: var(--primary-down-font-color);
+  color: inherit;
 }
 
 li {

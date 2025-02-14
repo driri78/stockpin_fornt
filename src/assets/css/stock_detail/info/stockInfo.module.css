@@ -102,6 +102,10 @@
   align-items: center;
 }
 
+.stock_info_container .content .stock_main_info_contianer .item a {
+  color: var(--primary-down-font-color);
+}
+
 .stock_info_container
   .content
   .stock_main_info_contianer
