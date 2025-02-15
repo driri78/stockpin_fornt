@@ -29,7 +29,6 @@
 }
 
 :root {
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
   --primary-color: #ee137b;
 
   --primary-home-border-color: #eee;
@@ -45,11 +44,14 @@
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
 
-  --primary-content-backgoundcolor: #02204707;
   --primary-button-backgoundcolor: #0220470d;
   --primary-hover-backgoundcolor: #0220470d;
   --primary-filter-hover-backgoundcolor: #ddd;
   --primary-filter-button-backgoundcolor: #0220470d;
+
+  --primary-content-backgoundcolor: #02204707;
+  --primary-light-comment-backgroundcolor: #0220470d;
+  --primary-bold-comment-backgroundcolor: #02204743;
 
   --primary-image-box-size: 2rem;
 }
@@ -58,6 +60,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 a {
@@ -83,6 +87,7 @@ button {
   font-family: "Spoqa Han Sans Neo";
   background-color: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
