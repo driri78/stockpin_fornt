@@ -43,15 +43,24 @@ const StockCommunity = () => {
           <h4>인기 급상승 커뮤니티</h4>
           <ul>
             <li>
-              <div>
-                <span></span>
-                <div></div>
-                <div>
-                  <div>
-                    <span></span>
-                    <span></span>
+              <div className="item">
+                <span className="number">1</span>
+                <div className="content">
+                  <div className="stock_img_box">
+                    <img
+                      src="https://thumb.tossinvest.com/image/resized/48x0/https%3A%2F%2Fstatic.toss.im%2Fpng-icons%2Fsecurities%2Ficn-sec-fill-NAS006XY7-E0.png"
+                      alt=""
+                    />
                   </div>
-                  <span></span>
+                  <div className="info_container">
+                    <div className="stock_info_box">
+                      <span>테슬라</span>
+                      <span className="down">-0.02%</span>
+                    </div>
+                    <div className="community_info_box">
+                      <span>글 10개</span>・<span>1분전</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
