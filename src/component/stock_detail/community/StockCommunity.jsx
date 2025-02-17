@@ -33,7 +33,7 @@ const StockCommunity = () => {
             </div>
             <div>
               <StockUserComment />
-              <div className="replay">
+              <div className="reply">
                 <StockUserComment />
               </div>
             </div>

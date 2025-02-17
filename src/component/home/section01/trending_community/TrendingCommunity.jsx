@@ -1,12 +1,12 @@
 import React from "react";
-import "@assets/css/home/section01/trendingBoard.css";
+import "@assets/css/home/section01/trendingCommunity.css";
 import { FaFireAlt } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { FaCircleUser } from "react-icons/fa6";
 
-const TrendingBoard = () => {
+const TrendingCommunity = () => {
   return (
-    <div className="trending_board_container">
+    <div className="trending_community_container">
       <h2 className="title">
         <div className="img_box">
           <FaFireAlt />
@@ -60,4 +60,4 @@ const TrendingBoard = () => {
   );
 };
 
-export default TrendingBoard;
+export default TrendingCommunity;

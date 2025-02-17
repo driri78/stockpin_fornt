@@ -1,4 +1,6 @@
 import React from "react";
+import { FaHeart } from "react-icons/fa";
+import { FaComment } from "react-icons/fa6";
 import "@assets/css/stock_detail/community/stockUserComment.css";
 const StockUserComment = () => {
   return (
@@ -22,14 +24,14 @@ const StockUserComment = () => {
         </p>
         <ul>
           <li>
-            <div>
-              <img src="" alt="" />
+            <div className="item">
+              <FaHeart />
               <span>6</span>
             </div>
           </li>
           <li>
-            <div>
-              <img src="" alt="" />
+            <div className="item">
+              <FaComment />
               <span></span>
             </div>
           </li>

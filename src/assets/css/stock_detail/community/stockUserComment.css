@@ -1,4 +1,6 @@
 .comment_contianer {
+  margin: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
   border-bottom: 1px solid var(--primary-light-border-color);
 
   display: flex;
@@ -52,4 +54,35 @@
   color: var(--primary-content-font-color);
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+.comment_contianer .content p {
+  color: var(--primary-comment-content-font-color);
+  font-size: 0.9rem;
+}
+
+.comment_contianer .content ul {
+  height: 32px;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.comment_contianer .content ul .item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.comment_contianer .content ul .item svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--primary-bold-comment-backgroundcolor);
+}
+
+.comment_contianer .content ul .item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-comment-footer-font-color);
 }

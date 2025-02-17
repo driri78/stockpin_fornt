@@ -307,7 +307,6 @@ const StockPriceChart = () => {
         type: "datetime",
         labels: {
           formatter: (value) => {
-            console.log(value);
             const date = new Date(value);
             return date.getDate() + "일";
           },
