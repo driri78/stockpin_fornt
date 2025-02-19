@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 
 const StockDetailLayout = () => {
   return (
-    <>
+    <div className="stock_detail_container">
       <Header />
       <StockDetailTitle />
       <section>
@@ -18,7 +18,7 @@ const StockDetailLayout = () => {
           <StockOrderKorea />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

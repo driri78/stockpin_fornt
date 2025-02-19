@@ -18,10 +18,7 @@ const StockUserComment = () => {
         <div className="user_info">
           <span className="name">왕토끼</span>・<span>8시간전</span>
         </div>
-        <p>
-          신데렐라 2시간 전 개미들 이제 털기 시작하네... 어떻게 개미들은
-          한결같냐...;;
-        </p>
+        <p>개미들 이제 털기 시작하네... 어떻게 개미들은 한결같냐...;;</p>
         <ul>
           <li>
             <div className="item">

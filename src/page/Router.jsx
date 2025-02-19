@@ -11,6 +11,7 @@ import {
 import Error404Page from "./Error404/Error404Page";
 import Layout from "@/layout/Layout";
 import StockDetailLayout from "@/layout/StockDetailLayout";
+import MyAccountPage from "./my_account/MyAccountPage";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -19,6 +20,8 @@ const Router = () => {
           <Route path="/" element={<HomePage />}></Route>
           {/* /stocks */}
           <Route path="/stocks" element={<StocksPage />}></Route>
+          {/* /my_account */}
+          <Route path="/my_account" element={<MyAccountPage />}></Route>
         </Route>
         {/* /stock/:stockId */}
         <Route path="/stock/:stockId" element={<StockDetailLayout />}>
