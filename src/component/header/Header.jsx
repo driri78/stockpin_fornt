@@ -22,7 +22,7 @@ const Header = () => {
             <a href="#">뉴스</a>
           </li>
           <li>
-            <Link to="my_account">내 계좌</Link>
+            <Link to="/my_account">내 계좌</Link>
           </li>
         </ul>
       </nav>

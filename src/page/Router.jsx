@@ -7,11 +7,12 @@ import {
   StockInfoPage,
   StockCommunityPage,
   StockAiPage,
-} from "./stock_detail/Stock";
+} from "./stock_detail/StockDetail";
+import { AssetsPage } from "./my_account/MyAccount";
 import Error404Page from "./Error404/Error404Page";
 import Layout from "@/layout/Layout";
 import StockDetailLayout from "@/layout/StockDetailLayout";
-import MyAccountPage from "./my_account/MyAccountPage";
+import MyAccountLayout from "@/layout/MyAccountLayout";
 const Router = () => {
   return (
     <BrowserRouter>
@@ -21,11 +22,15 @@ const Router = () => {
           {/* /stocks */}
           <Route path="/stocks" element={<StocksPage />}></Route>
           {/* /my_account */}
-          <Route path="/my_account" element={<MyAccountPage />}></Route>
+          <Route path="/my_account" element={<MyAccountLayout />}>
+            <Route index element={<AssetsPage />}></Route>
+            <Route path="assets" element={<AssetsPage />}></Route>
+          </Route>
         </Route>
+
         {/* /stock/:stockId */}
         <Route path="/stock/:stockId" element={<StockDetailLayout />}>
-          <Route index element={<Navigate to="/err404" />}></Route>
+          <Route index element={<StockPricePage />}></Route>
           <Route path="price" element={<StockPricePage />}></Route>
           <Route path="info" element={<StockInfoPage />}></Route>
           <Route path="community" element={<StockCommunityPage />}></Route>
