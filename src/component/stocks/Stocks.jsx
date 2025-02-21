@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoMdRefresh } from "react-icons/io";
 import { LiaArrowsAltVSolid } from "react-icons/lia";
 import "@assets/css/stocks/stocks.css";
-import KoreaFlag from "@assets/images/korea_flag.svg";
+import { KoreaFlag } from "@/assets/images/Image";
 import { useNavigate } from "react-router-dom";
 const Stocks = () => {
   const navigate = useNavigate();

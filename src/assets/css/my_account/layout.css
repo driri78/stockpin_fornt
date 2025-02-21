@@ -1,0 +1,10 @@
+.my_account_container {
+  min-width: 940px;
+  max-width: 1280px;
+  padding-top: 40px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 184px 1fr;
+  column-gap: 40px;
+}

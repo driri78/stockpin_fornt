@@ -1,0 +1,162 @@
+.assets_container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.assets_info_container {
+  padding-top: 0.5rem;
+  margin-bottom: 40px;
+
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+}
+
+.assets_info_container h2 {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.assets_info_container .total_assets {
+  color: var(--primary-content-font-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.assets_info_container .compare_assets {
+  color: var(--primary-light-content-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.assets_info_container .compare_assets span {
+  margin-left: 0.25rem;
+}
+
+.assets_chart_container .chart_box {
+  height: 231px;
+  border: 1px solid #000;
+}
+
+.assets_chart_container ul {
+  margin: 0.4rem 0;
+  display: flex;
+}
+
+.assets_chart_container ul li {
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.assets_chart_container ul li:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.assets_chart_container ul li.active {
+  border: 1px solid var(--primary-light-placeholder-font-color);
+  background-color: var(--primary-hover-backgoundcolor);
+
+  color: var(--primary-content-font-color);
+  font-weight: bold;
+}
+
+.remain_assets_container .header {
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.remain_assets_container .header .title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.remain_assets_container .header h3 {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.remain_assets_container .header span {
+  color: var(--primary-content-font-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.remain_assets_container .header .btn_box {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.remain_assets_container .header .btn_box button {
+  width: 70px;
+  height: 50%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-hover-backgoundcolor);
+
+  color: var(--primary-light-content-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.remain_assets_container .investable_assets_contianer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.75rem;
+}
+
+.remain_assets_container .investable_assets_box {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--primary-light-content-backgoundcolor);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.remain_assets_container .investable_assets_box .title {
+  color: var(--primary-content-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.remain_assets_container .investable_assets_box .title svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.remain_assets_container .investable_assets_box .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.remain_assets_container .investable_assets_box .content .remain_currency {
+  color: var(--primary-content-font-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.remain_assets_container .investable_assets_box .content .sub_comment {
+  color: var(--primary-light-content-font-color);
+  font-size: 0.8rem;
+}

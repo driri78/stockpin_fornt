@@ -40,12 +40,14 @@
   --primary-light-content-font-color: #4e5968;
   --primary-deactivate-font-color: #6b7684;
   --primary-placeholder-font-color: #aaa;
+  --primary-light-placeholder-font-color: #f2f4f6;
   --primary-hover-font-color: #ee137b;
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
   --primary-comment-title-font-color: #dd7d02;
 
   --primary-content-backgoundcolor: #02204707;
+  --primary-light-content-backgoundcolor: #f9fafb;
   --primary-button-backgoundcolor: #0220470d;
   --primary-hover-backgoundcolor: #0220470d;
   --primary-filter-hover-backgoundcolor: #ddd;
@@ -95,9 +97,9 @@ button {
 }
 
 .up {
-  color: var(--primary-up-font-color);
+  color: var(--primary-up-font-color) !important;
 }
 
 .down {
-  color: var(--primary-down-font-color);
+  color: var(--primary-down-font-color) !important;
 }

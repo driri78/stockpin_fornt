@@ -1,0 +1,22 @@
+.my_account_aside_container li {
+  padding: 0.6rem;
+  margin: 0.25rem 0;
+  border-radius: 0.5rem;
+
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.my_account_aside_container li:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.my_account_aside_container li.active {
+  background-color: var(--primary-hover-backgoundcolor);
+  color: var(--primary-font-color);
+}
