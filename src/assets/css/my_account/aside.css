@@ -1,3 +1,9 @@
+.my_account_aside_container ul {
+  padding-top: 40px;
+  position: sticky;
+  top: 80px;
+}
+
 .my_account_aside_container li {
   padding: 0.6rem;
   margin: 0.25rem 0;

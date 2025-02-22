@@ -71,6 +71,7 @@
 }
 
 .remain_assets_container .header {
+  padding-left: 0.5rem;
   margin-bottom: 0.5rem;
 
   display: flex;
@@ -106,20 +107,49 @@
   height: 50%;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: var(--primary-hover-backgoundcolor);
+  background-color: var(--primary-button-backgoundcolor);
 
   color: var(--primary-light-content-font-color);
   font-size: 0.9rem;
   font-weight: 500;
+
+  transition: 0.2s;
 }
 
-.remain_assets_container .investable_assets_contianer {
+.remain_assets_container .header .btn_box button:hover {
+  background-color: var(--primary-hover-button-backgoundcolor);
+}
+
+.invested_assets_container .header {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.invested_assets_container .header h3 {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.invested_assets_container .header .total_ammount {
+  padding-right: 0.5rem;
+
+  color: var(--primary-content-font-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.assets_content_container .investable_assets_contianer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 0.75rem;
 }
 
-.remain_assets_container .investable_assets_box {
+.assets_content_container .investable_assets_box {
   padding: 1.5rem;
   border-radius: 0.75rem;
   background-color: var(--primary-light-content-backgoundcolor);
@@ -129,7 +159,7 @@
   gap: 0.75rem;
 }
 
-.remain_assets_container .investable_assets_box .title {
+.assets_content_container .investable_assets_box .title {
   color: var(--primary-content-font-color);
   font-size: 0.9rem;
   font-weight: 500;
@@ -139,24 +169,72 @@
   align-items: center;
 }
 
-.remain_assets_container .investable_assets_box .title svg {
+.assets_content_container .investable_assets_box .title svg {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.remain_assets_container .investable_assets_box .content {
+.assets_content_container .investable_assets_box .content {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.remain_assets_container .investable_assets_box .content .remain_currency {
+.assets_content_container .investable_assets_box .content .remain_currency {
   color: var(--primary-content-font-color);
   font-size: 1rem;
   font-weight: 500;
 }
 
-.remain_assets_container .investable_assets_box .content .sub_comment {
+.assets_content_container .investable_assets_box .content .sub_comment {
   color: var(--primary-light-content-font-color);
   font-size: 0.8rem;
+}
+
+.revenue_contianer {
+  margin-bottom: 4rem;
+}
+
+.revenue_contianer .header {
+  padding-left: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.revenue_contianer .header h3 {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.revenue_contianer .header span {
+  color: var(--primary-content-font-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.revenue_contianer ul li a {
+  padding: 0.9rem 0.5rem;
+  border-radius: 0.5rem;
+
+  color: var(--primary-content-font-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition: 0.2s;
+
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.revenue_contianer ul li a:hover {
+  background-color: var(--primary-hover-backgoundcolor);
+}
+
+.revenue_contianer ul li svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }

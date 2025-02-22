@@ -7,7 +7,9 @@ const MyAccountLayout = () => {
   return (
     <div className="my_account_container">
       <Aside />
-      <Outlet />
+      <div className="content">
+        <Outlet />
+      </div>
     </div>
   );
 };

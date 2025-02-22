@@ -1,10 +1,15 @@
 header {
-  width: 95%;
-  margin: 0 auto;
-  padding: 1.5rem 0;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #fff;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 
 header h1 {

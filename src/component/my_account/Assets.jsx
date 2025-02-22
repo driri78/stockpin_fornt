@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/my_account/assets/assets.css";
-import { Won, Dollar, KoreaFlag, USAFlag } from "@/assets/images/Image";
+import {
+  Won,
+  Dollar,
+  KoreaFlag,
+  USAFlag,
+  SalesRevenue,
+  Dividends,
+  Interest,
+} from "@/assets/images/Image";
 
 const Assets = () => {
   return (
@@ -24,7 +32,7 @@ const Assets = () => {
           </ul>
         </div>
       </div>
-      <div className="remain_assets_container">
+      <div className="assets_content_container remain_assets_container">
         <div className="header">
           <div className="title">
             <h3>주문 가능 금액</h3>
@@ -59,12 +67,15 @@ const Assets = () => {
           </div>
         </div>
       </div>
-      <div className="remain_assets_container">
-        <h3>투자 중인 금액</h3>
-        <div>
-          <span>58,200원</span>
-          <span className="down">(-0.6%)</span>
+      <div className="assets_content_container invested_assets_container">
+        <div className="header">
+          <h3>투자 중인 금액</h3>
+          <div>
+            <span className="total_ammount">58,200원</span>
+            <span className="down">(-0.6%)</span>
+          </div>
         </div>
+
         <div className="investable_assets_contianer">
           <div className="investable_assets_box">
             <div className="title">
@@ -97,15 +108,15 @@ const Assets = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h3>2월 수익</h3>
-        <div>
+      <div className="revenue_contianer">
+        <div className="header">
+          <h3>2월 수익</h3>
           <span>0원</span>
         </div>
         <ul>
           <li>
             <Link to="#">
-              <img src="" alt="" />
+              <SalesRevenue />
               <div>
                 <span>판매수익</span>ㅣ<span>0원</span>
               </div>
@@ -113,7 +124,7 @@ const Assets = () => {
           </li>
           <li>
             <Link to="#">
-              <img src="" alt="" />
+              <Dividends />
               <div>
                 <span>배당금</span>ㅣ<span>0원</span>
               </div>
@@ -121,7 +132,7 @@ const Assets = () => {
           </li>
           <li>
             <Link to="#">
-              <img src="" alt="" />
+              <Interest />
               <div>
                 <span>이자</span>ㅣ<span>0원</span>
               </div>
