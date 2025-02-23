@@ -186,7 +186,7 @@
 .filter_list_container ul li button {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: var(--primary-filter-button-backgoundcolor);
+  background-color: var(--primary-button-backgoundcolor);
 
   color: var(--primary-deactivate-font-color);
   font-weight: bold;
@@ -198,7 +198,7 @@
 }
 
 .filter_list_container ul li button:hover {
-  background-color: var(--primary-filter-hover-backgoundcolor);
+  background-color: var(--primary-hover-button-backgoundcolor);
 }
 
 .filter_list_container ul li button span {

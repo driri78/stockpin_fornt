@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBuildingUser } from "react-icons/fa6";
+import { FaHeart, FaBell } from "react-icons/fa";
 import "@assets/css/stock_detail/stockDetailTitle.css";
 import { Link, useParams } from "react-router-dom";
 const StockDetailTitle = () => {
@@ -8,24 +9,34 @@ const StockDetailTitle = () => {
   return (
     <div>
       <div className="stock_detail_title_container">
-        <div className="icon_box">
-          <FaBuildingUser />
-        </div>
-        <div className="info">
-          <div className="name">
-            <span>애플</span>
-            <span>AAPL</span>
+        <div className="stock_title_box">
+          <div className="icon_box">
+            <FaBuildingUser />
           </div>
-          <div className="value">
-            <span className="krw">332,979원</span>
-            <div className="sub_box">
-              <span className="usd">$226.80</span>
-              <div className="fluctuating_value_rate up">
-                <span>+1,895원</span>
-                <span>(0.5%)</span>
+          <div className="info">
+            <div className="name">
+              <span>애플</span>
+              <span>AAPL</span>
+            </div>
+            <div className="value">
+              <span className="krw">332,979원</span>
+              <div className="sub_box">
+                <span className="usd">$226.80</span>
+                <div className="fluctuating_value_rate up">
+                  <span>+1,895원</span>
+                  <span>(0.5%)</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="btn_box">
+          <button>
+            <FaBell />
+          </button>
+          <button>
+            <FaHeart />
+          </button>
         </div>
       </div>
       <ul className="stock_menu_contianer">

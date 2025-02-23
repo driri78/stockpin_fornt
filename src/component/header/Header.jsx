@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "@assets/css/header/header.css";
 import { PiMoonStarsFill, PiSunHorizonFill } from "react-icons/pi";
 
 const Header = () => {
+  const uri = useLocation().pathname;
+
   return (
-    <header>
+    <header className={uri.startsWith("/stock/") ? "stock_detail_header" : ""}>
       <h1>
         <Link to="/">
           <span>로고 StockPin</span>
