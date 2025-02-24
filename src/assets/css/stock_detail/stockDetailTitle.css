@@ -118,6 +118,6 @@
 
 .stock_menu_contianer li.active {
   color: var(--primary-content-font-color);
-  background-color: var(--primary-filter-button-backgoundcolor);
+  background-color: var(--primary-button-backgoundcolor);
   font-weight: 600;
 }
