@@ -1,4 +1,4 @@
-import Assets from "@/component/my_account/Assets";
+import Assets from "@/component/my_account/assets/Assets";
 import React from "react";
 
 const AssetsPage = () => {

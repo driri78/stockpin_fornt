@@ -1,2 +1,3 @@
 import AssetsPage from "./AssetsPage.jsx";
-export { AssetsPage };
+import TradingHistoryPage from "./TradingHistoryPage.jsx";
+export { AssetsPage, TradingHistoryPage };

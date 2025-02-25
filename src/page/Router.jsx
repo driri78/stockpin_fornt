@@ -8,7 +8,7 @@ import {
   StockCommunityPage,
   StockAiPage,
 } from "./stock_detail/StockDetail";
-import { AssetsPage } from "./my_account/MyAccount";
+import { AssetsPage, TradingHistoryPage } from "./my_account/MyAccount";
 import Error404Page from "./Error404/Error404Page";
 import Layout from "@/layout/Layout";
 import StockDetailLayout from "@/layout/StockDetailLayout";
@@ -25,6 +25,10 @@ const Router = () => {
           <Route path="/my_account" element={<MyAccountLayout />}>
             <Route index element={<AssetsPage />}></Route>
             <Route path="assets" element={<AssetsPage />}></Route>
+            <Route
+              path="trading_history"
+              element={<TradingHistoryPage />}
+            ></Route>
           </Route>
         </Route>
 

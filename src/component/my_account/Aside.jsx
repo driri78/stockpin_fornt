@@ -6,10 +6,10 @@ const Aside = () => {
     <nav className="my_account_aside_container">
       <ul>
         <li className="active">
-          <Link to="#">자산</Link>
+          <Link to="assets">자산</Link>
         </li>
         <li>
-          <Link to="#">거래 내역</Link>
+          <Link to="trading_history">거래 내역</Link>
         </li>
         <li>
           <Link to="#">주문 내역</Link>
