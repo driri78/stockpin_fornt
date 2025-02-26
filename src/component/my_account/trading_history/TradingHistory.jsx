@@ -1,12 +1,12 @@
 import React from "react";
-
+import "@assets/css/my_account/trading_history/trading_history.css";
 const TradingHistory = () => {
   return (
-    <div>
+    <div className="trading_history_container">
       <h2>거래 내역</h2>
       <div>
         <div>
-          <ul>
+          <ul className="menu_box">
             <li>원화</li>
             <li>달러</li>
           </ul>

@@ -1,0 +1,14 @@
+.trading_history_container {
+  margin-right: 42px;
+}
+
+.trading_history_container h2 {
+  color: var(--primary-content-font-color);
+  font-size: 1.4rem;
+}
+
+.trading_history_container .menu_box {
+  border-bottom: 1px solid var(--primary-light-border-color);
+
+  display: flex;
+}
