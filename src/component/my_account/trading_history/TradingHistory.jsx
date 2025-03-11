@@ -4,7 +4,7 @@ const TradingHistory = () => {
   return (
     <div className="trading_history_container">
       <h2>거래 내역</h2>
-      <div>
+      <div className="">
         <div>
           <ul className="menu_box">
             <li>원화</li>

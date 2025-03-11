@@ -1,11 +1,20 @@
-import React from "react";
-import "../../../../assets/css/home/section01/search.css";
+import React, { useState } from "react";
+import "@assets/css/home/section01/search.css";
 import { IoSearch } from "react-icons/io5";
 import { FaBuildingUser, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
+import axios from "axios";
 
 const Search = () => {
+  axios({ method: "get", url: "http://localhost:8080/api/stock/volume/top" })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
   return (
     <div className="search_container">
       <div className="input_box">
