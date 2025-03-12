@@ -1,7 +1,7 @@
 .home_container {
-  width: 90%;
+  width: 80%;
   margin: 24px auto;
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 70% 30%;
 }

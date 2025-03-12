@@ -44,9 +44,18 @@ header h1 {
 }
 
 .main_menu ul li:hover,
-.sub_menu ul li:hover:not(.dark_mode_container),
 .sub_menu ul li a:hover {
   color: var(--primary-hover-font-color);
+}
+
+.sub_menu .login_btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .sub_menu .img_box {
@@ -56,26 +65,4 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.dark_mode_container {
-  padding: 2px;
-  border: 1px solid var(--primary-border-color);
-  border-radius: 2rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-
-  position: relative;
-}
-
-.dark_mode_container .choice_box {
-  position: absolute;
-  background-color: #fff;
-  width: var(--primary-image-box-size);
-  height: var(--primary-image-box-size);
-  border-radius: 2rem;
-  box-shadow: 1px 1px 2px #111;
-
-  cursor: pointer;
 }

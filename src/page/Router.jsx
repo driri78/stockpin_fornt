@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { SignInPage, SignUpPage } from "./auth/auth";
 import HomePage from "./home/HomePage";
 import StocksPage from "./stock/StocksPage";
 import {
@@ -13,12 +14,19 @@ import Error404Page from "./Error404/Error404Page";
 import Layout from "@/layout/Layout";
 import StockDetailLayout from "@/layout/StockDetailLayout";
 import MyAccountLayout from "@/layout/MyAccountLayout";
+import AuthLayout from "@/layout/AuthLayout";
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />}></Route>
+        {/* /login */}
+        <Route element={<AuthLayout />}>
+          <Route path="/signin" element={<SignInPage />}></Route>
+          <Route path="/signup" element={<SignUpPage />}></Route>
+        </Route>
+
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />}></Route>
           {/* /stocks */}
           <Route path="/stocks" element={<StocksPage />}></Route>
           {/* /my_account */}
@@ -42,7 +50,7 @@ const Router = () => {
         </Route>
 
         {/* 잘못된 경로 */}
-        <Route path="*" element={<Navigate to="/err404" />} />
+        <Route path="*" element={<Navigate to="/err404" replace="true" />} />
         <Route path="/err404" element={<Error404Page />}></Route>
       </Routes>
     </BrowserRouter>

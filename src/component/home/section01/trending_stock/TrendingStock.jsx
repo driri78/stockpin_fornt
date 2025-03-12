@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "@assets/css/home/section01/search.css";
-import { IoSearch } from "react-icons/io5";
+import "@assets/css/home/section01/trendingStock.css";
 import { FaBuildingUser, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
 
 const Search = () => {
-  axios({ method: "get", url: "http://localhost:8080/api/stock/volume/top" })
+  axios({ method: "get", url: "http://localhost:9090/api/stock/volume/top" })
     .then((res) => {
       console.log(res);
     })
@@ -17,12 +16,6 @@ const Search = () => {
 
   return (
     <div className="search_container">
-      <div className="input_box">
-        <label htmlFor="" className="img_box">
-          <IoSearch style={{ width: "1.25rem", height: "1.25rem" }} />
-        </label>
-        <input type="text" placeholder="검색어를 입력하세요" />
-      </div>
       <div className="content">
         <div className="title">
           <h2>실시간 차트</h2>

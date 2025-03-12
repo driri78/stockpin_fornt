@@ -5,7 +5,6 @@ import StockIndex from "../section02/stock_index/StockIndex";
 const Section02 = () => {
   return (
     <section className="section02">
-      <Login />
       <StockIndex />
     </section>
   );
