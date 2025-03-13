@@ -1,0 +1,14 @@
+.sign_header {
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign_header h1 {
+  font-size: 1.6rem;
+}
+
+.sign_header button {
+  font-size: 1.25rem;
+}

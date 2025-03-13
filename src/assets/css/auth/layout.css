@@ -1,0 +1,22 @@
+.auth_container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap_auth_content {
+  min-width: 1280px;
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  padding-bottom: 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.auth_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

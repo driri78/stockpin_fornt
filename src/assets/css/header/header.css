@@ -1,4 +1,4 @@
-header {
+.root_header {
   width: 100%;
   padding: 1.5rem;
   background-color: #fff;
@@ -12,11 +12,11 @@ header {
   z-index: 999;
 }
 
-header.stock_detail_header {
+.root_header.stock_detail_header {
   background-color: #f6f7f9;
 }
 
-header h1 {
+.root_header h1 {
   font-size: 1.6rem;
 }
 

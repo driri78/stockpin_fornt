@@ -5,7 +5,11 @@ const Header = () => {
   const uri = useLocation().pathname;
 
   return (
-    <header className={uri.startsWith("/stock/") ? "stock_detail_header" : ""}>
+    <header
+      className={`root_header ${
+        uri.startsWith("/stock/") ? "stock_detail_header" : ""
+      }`}
+    >
       <h1>
         <Link to="/">
           <span>로고 StockPin</span>
