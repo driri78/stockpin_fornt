@@ -1,0 +1,72 @@
+.sign_in {
+  width: 404px;
+}
+
+.sign_in_title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sign_in_content {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.sign_in_content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_in_content ul li {
+  width: 50%;
+  padding: 0.75rem 0;
+  border-radius: 5rem;
+  background-color: #eee;
+
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.sign_in_input_box input {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+}
+
+.sign_in_input_box .name_birth_box {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.sign_in_input_box .name_birth_box .item {
+  width: 50%;
+}
+
+.sign_in_input_box .name_birth_box .item input {
+}
+
+.sign_in_input_box .phone_box input {
+  width: 100%;
+}
+
+.sign_in_check_box input {
+  width: 1rem;
+  height: 1rem;
+  font-weight: bold;
+}
+
+.sign_in_check_box .item {
+  color: var(--primary-deactivate-font-color);
+  font-size: 0.9rem;
+
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}

@@ -5,9 +5,29 @@
   flex-direction: column;
 }
 
+.main_auth {
+  height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_auth .background_color_box {
+  width: 100vw;
+  height: 300vh;
+  background: linear-gradient(
+    #e6bce9 0%,
+    rgba(246, 49, 141, 0.109) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  position: absolute;
+  top: -210vh;
+  z-index: -1;
+}
+
 .wrap_auth_content {
   min-width: 1280px;
-  height: calc(100vh - 80px);
   margin: 0 auto;
   padding-bottom: 100px;
 
@@ -16,6 +36,8 @@
 }
 
 .auth_content {
+  padding: 1.5rem;
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

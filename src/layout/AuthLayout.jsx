@@ -7,11 +7,14 @@ const AuthLayout = () => {
   return (
     <div className="auth_container">
       <Header />
-      <div className="wrap_auth_content">
-        <div className="auth_content">
-          <Outlet />
+      <main className="main_auth">
+        <div className="wrap_auth_content">
+          <div className="auth_content">
+            <Outlet />
+          </div>
         </div>
-      </div>
+        <div className="background_color_box"></div>
+      </main>
     </div>
   );
 };
