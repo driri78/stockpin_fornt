@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .main_auth .background_color_box {
   width: 100vw;
   height: 300vh;
@@ -22,7 +23,7 @@
   );
 
   position: absolute;
-  top: -210vh;
+  top: -200vh;
   z-index: -1;
 }
 

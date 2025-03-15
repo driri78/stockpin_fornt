@@ -31,6 +31,9 @@
 :root {
   --primary-color: #ee137b;
 
+  --primary-checkbox-color: #d1d6db;
+  --primary-hover-checkbox-color: #ee137925;
+
   --primary-home-border-color: #eee;
   --primary-border-color: #212121;
   --primary-light-border-color: #ddd;
@@ -44,6 +47,7 @@
   --primary-hover-font-color: #ee137b;
   --primary-up-font-color: #f04452;
   --primary-down-font-color: #318bf6;
+  --primary-anchor-font-color: #318bf6;
   --primary-comment-title-font-color: #dd7d02;
 
   --primary-content-backgoundcolor: #02204707;

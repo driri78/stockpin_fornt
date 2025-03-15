@@ -8,4 +8,15 @@ import SalesRevenue from "./sales_revenue_icon.svg";
 import Dividends from "./dividends_icon.svg";
 import Interest from "./interest_icon.svg";
 
-export { Won, Dollar, KoreaFlag, USAFlag, SalesRevenue, Dividends, Interest };
+import Check from "./check_icon.svg";
+
+export {
+  Won,
+  Dollar,
+  KoreaFlag,
+  USAFlag,
+  SalesRevenue,
+  Dividends,
+  Interest,
+  Check,
+};
