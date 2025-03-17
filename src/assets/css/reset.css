@@ -54,6 +54,7 @@
   --primary-light-content-backgoundcolor: #f9fafb;
   --primary-button-backgoundcolor: #0220470d;
   --primary-hover-button-backgoundcolor: #0220471f;
+  --primary-light-hover-button-backgoundcolor: #0220470a;
   --primary-hover-backgoundcolor: #0220470d;
 
   --primary-light-comment-backgroundcolor: #0220470d;
@@ -94,7 +95,7 @@ input {
 button {
   font-family: "Spoqa Han Sans Neo";
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   outline: none;
   cursor: pointer;
 }

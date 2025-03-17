@@ -2,34 +2,43 @@ import { Check } from "@/assets/images/Image";
 import React from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signUp.css";
+import { IoIosArrowDown } from "react-icons/io";
+
 const SignUp = () => {
   return (
-    <div className="sign_in">
-      <div className="sign_in_title">
+    <div className="sign_up">
+      <div className="sign_up_title">
         <h2>
           <span>회원가입</span>
           <span>😮</span>
         </h2>
       </div>
-      <div className="sign_in_content">
-        <div className="sign_in_input_box">
-          <div className="item">
+      <div className="sign_up_content">
+        <div className="sign_up_input_box">
+          <div className="name_box">
             <input type="text" placeholder="이름" />
           </div>
-          <div className="name_birth_box">
+          <div className="birth_box">
             <div className="item">
-              <input type="text" placeholder="생년월일 6자리" />
+              <input type="text" placeholder="생년월일" maxLength={"6"} />
             </div>
-            <div className="item">
-              <input type="text" placeholder="생년월일 6자리" />
+            <div>
+              <span>-</span>
+            </div>
+            <div className="after_number_box">
+              <div className="item">
+                <input type="text" placeholder="" maxLength={"1"} />
+              </div>
+              <span className="secret_number">●●●●●●</span>
             </div>
           </div>
-          <div className="name_birth_box">
+          <div className="phone_box">
             <button>
-              <div>
-                통신사<span>화살표 이모티콘</span>
+              <div className="select_box">
+                <span>통신사</span>
+                <IoIosArrowDown />
               </div>
-              <ul>
+              <ul className="active">
                 <li>SKT</li>
                 <li>KT</li>
                 <li>LG U+</li>
@@ -38,10 +47,12 @@ const SignUp = () => {
                 <li>LG U+ 알뜰폰</li>
               </ul>
             </button>
-            <input type="text" placeholder="휴대폰 번호" />
+            <div>
+              <input type="text" placeholder="휴대폰 번호" />
+            </div>
           </div>
         </div>
-        <div className="sign_in_check_box">
+        <div className="sign_check_box">
           <div className="item">
             <Check />
             <input type="checkbox" id="all" />
@@ -65,11 +76,11 @@ const SignUp = () => {
             </label>
           </div>
         </div>
-        <div className="sign_in_btn_box">
+        <div className="sign_btn_box">
           <button>인증번호 받기</button>
         </div>
       </div>
-      <div className="sign_in_footer">
+      <div className="sign_footer">
         <span>스톡핀 회원가입을 하신적이 있나요?</span>
         <Link to="/signin">로그인</Link>
       </div>
