@@ -1,5 +1,5 @@
 import Header from "@/component/header/Header";
-import StockOrderKorea from "@/component/stock_detail/StockOrderKorea";
+import StockOrderKorea from "@/component/stock_detail/StockOrder";
 import StockDetailTitle from "@component/stock_detail/StockDetailTitle";
 import "@assets/css/stock_detail/layout.css";
 import React from "react";

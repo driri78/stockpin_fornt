@@ -1,12 +1,15 @@
 .stock_order_container {
   width: 20%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 1rem;
 
   background-color: #fff;
 }
 
 .stock_order_container h3 {
-  font-size: 0.9rem;
+  padding: 0.5rem 0;
+
+  color: var(--primary-light-content-font-color);
+  font-size: 0.85rem;
 }
