@@ -92,6 +92,10 @@ input {
   cursor: pointer;
 }
 
+input::placeholder {
+  color: var(--primary-placeholder-font-color);
+}
+
 button {
   font-family: "Spoqa Han Sans Neo";
   background-color: transparent;

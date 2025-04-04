@@ -15,30 +15,66 @@ const SignUp = () => {
       </div>
       <div className="sign_up_content">
         <div className="sign_up_input_box">
-          <div className="name_box">
-            <input type="text" placeholder="이름" />
-          </div>
           <div className="birth_box">
             <div className="item">
-              <input type="text" placeholder="생년월일" maxLength={"6"} />
+              <input
+                className="essential_input"
+                type="text"
+                placeholder="생년월일"
+                maxLength={"6"}
+              />
             </div>
             <div>
               <span>-</span>
             </div>
             <div className="after_number_box">
               <div className="item">
-                <input type="text" placeholder="" maxLength={"1"} />
+                <input
+                  className="essential_input"
+                  type="text"
+                  placeholder=""
+                  maxLength={"1"}
+                />
               </div>
               <span className="secret_number">●●●●●●</span>
             </div>
           </div>
-          <div className="phone_box">
+          <div className="name_box">
+            <input className="essential_input" type="text" placeholder="이름" />
+          </div>
+          <div className="email_box">
+            <div className="input_box">
+              <input
+                className="essential_input"
+                type="text"
+                placeholder="이메일"
+              />
+            </div>
+            <div>
+              <span>@</span>
+            </div>
+            <div className="select_box essential_input">
+              <span>선택</span>
+              <IoIosArrowDown />
+              <ul className="">
+                <li>naver.com</li>
+                <li>gmail.com</li>
+                <li>daum.net</li>
+                <li>hanmail.net</li>
+                <li>icloud.com</li>
+                <li>outlook.com</li>
+                <li>직접입력</li>
+              </ul>
+            </div>
+          </div>
+          {/* sms api 유료라 주석처리 => 대신 이메일 방식으로 변환*/}
+          {/* <div className="phone_box">
             <button>
               <div className="select_box">
                 <span>통신사</span>
                 <IoIosArrowDown />
               </div>
-              <ul className="active">
+              <ul className="">
                 <li>SKT</li>
                 <li>KT</li>
                 <li>LG U+</li>
@@ -50,7 +86,7 @@ const SignUp = () => {
             <div>
               <input type="text" placeholder="휴대폰 번호" />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="sign_check_box">
           <div className="item">
