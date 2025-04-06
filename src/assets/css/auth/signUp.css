@@ -40,7 +40,6 @@
   cursor: pointer;
 }
 
-.sign_up_input_box .phone_box button:hover,
 .sign_up_input_box .essential_input:hover,
 .sign_up_input_box .essential_input:focus {
   border-color: var(--primary-color);
@@ -128,8 +127,8 @@
 .sign_up_input_box .email_box ul.active {
   visibility: visible;
 }
-/* sms 인증 api 유료라 보류류
- .sign_up_input_box .phone_box {
+/* sms 인증 api 유료라 보류 */
+.sign_up_input_box .phone_box {
   display: flex;
   gap: 0.75rem;
   align-items: center;
@@ -184,4 +183,4 @@
 
 .sign_up_input_box .phone_box ul.active {
   visibility: visible;
-} */
+}

@@ -62,6 +62,9 @@
 
   font-weight: bold;
 
+  position: relative;
+  z-index: 1;
+
   transition: 0.2s;
 }
 
@@ -88,12 +91,22 @@
   align-items: center;
 }
 
+.sign_check_box .item .check_img_box {
+  width: 1rem;
+  height: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  z-index: 2;
+}
+
 .sign_check_box svg {
   opacity: 0;
   width: 1rem;
   height: 1rem;
-
-  position: absolute;
 }
 
 .sign_check_box .item:has(input:checked) svg {

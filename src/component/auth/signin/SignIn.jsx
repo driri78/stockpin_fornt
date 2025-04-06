@@ -31,17 +31,23 @@ const SignIn = () => {
         </div>
         <div className="sign_check_box">
           <div className="item">
-            <Check />
+            <label className="check_img_box" htmlFor="all">
+              <Check />
+            </label>
             <input type="checkbox" id="all" />
             <label htmlFor="all">필수 약관에 모두 동의</label>
           </div>
           <div className="item">
-            <Check />
+            <label className="check_img_box" htmlFor="check1">
+              <Check />
+            </label>
             <input type="checkbox" id="check1" />
             <label htmlFor="check1">개인정보 수집·이용 동의</label>
           </div>
           <div className="item">
-            <Check />
+            <label className="check_img_box" htmlFor="check2">
+              <Check />
+            </label>
             <input type="checkbox" id="check2" />
             <label htmlFor="check2">개인정보 제3자 제공 동의</label>
           </div>
