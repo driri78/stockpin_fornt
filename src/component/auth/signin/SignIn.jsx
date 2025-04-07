@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signIn.css";
 import { Check } from "@assets/images/Image";
+import { IoIosArrowDown } from "react-icons/io";
 const SignIn = () => {
   return (
     <div className="sign_in">
@@ -17,7 +18,39 @@ const SignIn = () => {
           <li>QR코드로 로그인</li>
         </ul>
         <div className="sign_in_input_box">
-          <div className="name_birth_box">
+          <div className="email_box">
+            <div className="input_box">
+              <input
+                className="essential_input"
+                type="text"
+                placeholder="이메일"
+              />
+            </div>
+            <div>
+              <span>@</span>
+            </div>
+            <div className="select_box essential_input">
+              <span>선택</span>
+              <IoIosArrowDown />
+              <ul className="">
+                <li>naver.com</li>
+                <li>gmail.com</li>
+                <li>daum.net</li>
+                <li>hanmail.net</li>
+                <li>icloud.com</li>
+                <li>outlook.com</li>
+                <li>직접입력</li>
+              </ul>
+            </div>
+          </div>
+          <div className="password_box">
+            <input
+              className="essential_input"
+              type="password"
+              placeholder="비밀번호"
+            />
+          </div>
+          {/* <div className="name_birth_box">
             <div className="item">
               <input type="text" placeholder="이름" />
             </div>
@@ -27,7 +60,7 @@ const SignIn = () => {
           </div>
           <div className="phone_box">
             <input type="text" placeholder="휴대폰 번호" maxLength={"13"} />
-          </div>
+          </div> */}
         </div>
         <div className="sign_check_box">
           <div className="item">

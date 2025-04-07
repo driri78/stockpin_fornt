@@ -50,6 +50,10 @@
   margin-bottom: 1.5rem;
 }
 
+.sign_in_input_box > div {
+  margin-bottom: 0.5rem;
+}
+
 .sign_in_input_box input {
   width: 100%;
   padding: 0.9rem;

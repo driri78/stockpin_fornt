@@ -43,7 +43,7 @@ const SignUp = () => {
             <input className="essential_input" type="text" placeholder="이름" />
           </div>
           {/* sms api 유료라 주석처리 => 대신 이메일 방식으로 변환*/}
-          <div className="phone_box">
+          {/* <div className="phone_box">
             <button>
               <div className="select_box essential_input">
                 <span>통신사</span>
@@ -64,8 +64,8 @@ const SignUp = () => {
                 type="text"
                 placeholder="휴대폰 번호"
               />
-            </div>
-          </div>
+            </div> 
+          </div>*/}
           <div className="email_box">
             <div className="input_box">
               <input
