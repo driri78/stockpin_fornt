@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signIn.css";
-import { Check } from "@assets/images/Image";
-import { IoIosArrowDown } from "react-icons/io";
+import Email from "../inputBox/Email";
+import Password from "../inputBox/Password";
+import AgreementCheckbox from "../AgreementCheckbox";
+
+const agreementItems = [
+  { id: "all", text: "필수 약관에 모두 동의" },
+  { id: "check1", text: "개인정보 수집·이용 동의" },
+  { id: "check2", text: "개인정보 제3자 제공 동의" },
+];
+
 const SignIn = () => {
   return (
     <div className="sign_in">
@@ -14,42 +22,12 @@ const SignIn = () => {
       </div>
       <div className="sign_in_content">
         <ul>
-          <li className="active">휴대폰 번호로 로그인</li>
+          <li className="active">이메일로 로그인</li>
           <li>QR코드로 로그인</li>
         </ul>
         <div className="sign_in_input_box">
-          <div className="email_box">
-            <div className="input_box">
-              <input
-                className="essential_input"
-                type="text"
-                placeholder="이메일"
-              />
-            </div>
-            <div>
-              <span>@</span>
-            </div>
-            <div className="select_box essential_input">
-              <span>선택</span>
-              <IoIosArrowDown />
-              <ul className="">
-                <li>naver.com</li>
-                <li>gmail.com</li>
-                <li>daum.net</li>
-                <li>hanmail.net</li>
-                <li>icloud.com</li>
-                <li>outlook.com</li>
-                <li>직접입력</li>
-              </ul>
-            </div>
-          </div>
-          <div className="password_box">
-            <input
-              className="essential_input"
-              type="password"
-              placeholder="비밀번호"
-            />
-          </div>
+          <Email />
+          <Password />
           {/* <div className="name_birth_box">
             <div className="item">
               <input type="text" placeholder="이름" />
@@ -63,27 +41,7 @@ const SignIn = () => {
           </div> */}
         </div>
         <div className="sign_check_box">
-          <div className="item">
-            <label className="check_img_box" htmlFor="all">
-              <Check />
-            </label>
-            <input type="checkbox" id="all" />
-            <label htmlFor="all">필수 약관에 모두 동의</label>
-          </div>
-          <div className="item">
-            <label className="check_img_box" htmlFor="check1">
-              <Check />
-            </label>
-            <input type="checkbox" id="check1" />
-            <label htmlFor="check1">개인정보 수집·이용 동의</label>
-          </div>
-          <div className="item">
-            <label className="check_img_box" htmlFor="check2">
-              <Check />
-            </label>
-            <input type="checkbox" id="check2" />
-            <label htmlFor="check2">개인정보 제3자 제공 동의</label>
-          </div>
+          <AgreementCheckbox data={agreementItems} />
         </div>
         <div className="sign_btn_box">
           <button>로그인</button>

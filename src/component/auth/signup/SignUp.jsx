@@ -1,8 +1,19 @@
-import { Check } from "@/assets/images/Image";
 import React from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signUp.css";
-import { IoIosArrowDown } from "react-icons/io";
+import Email from "../inputBox/Email";
+import Password from "../inputBox/Password";
+import AgreementCheckbox from "../AgreementCheckbox";
+
+const agreementItems = [
+  { id: "all", text: "필수 약관에 모두 동의" },
+  { id: "check1", text: "휴대폰 본인확인 서비스 약관동의" },
+  { id: "check2", text: "준회원 이용약관" },
+  {
+    id: "check3",
+    text: "개인(신용)정보 수집이용 동의(회원가입/휴대폰 본인인증)",
+  },
+];
 
 const SignUp = () => {
   return (
@@ -66,70 +77,11 @@ const SignUp = () => {
               />
             </div> 
           </div>*/}
-          <div className="email_box">
-            <div className="input_box">
-              <input
-                className="essential_input"
-                type="text"
-                placeholder="이메일"
-              />
-            </div>
-            <div>
-              <span>@</span>
-            </div>
-            <div className="select_box essential_input">
-              <span>선택</span>
-              <IoIosArrowDown />
-              <ul className="">
-                <li>naver.com</li>
-                <li>gmail.com</li>
-                <li>daum.net</li>
-                <li>hanmail.net</li>
-                <li>icloud.com</li>
-                <li>outlook.com</li>
-                <li>직접입력</li>
-              </ul>
-            </div>
-          </div>
-          <div className="password_box">
-            <input
-              className="essential_input"
-              type="password"
-              placeholder="비밀번호"
-            />
-          </div>
+          <Email />
+          <Password />
         </div>
         <div className="sign_check_box">
-          <div className="item">
-            <label className="check_img_box" htmlFor="all">
-              <Check />
-            </label>
-            <input type="checkbox" id="all" />
-            <label htmlFor="all">필수 약관에 모두 동의</label>
-          </div>
-          <div className="item">
-            <label className="check_img_box" htmlFor="check1">
-              <Check />
-            </label>
-            <input type="checkbox" id="check1" />
-            <label htmlFor="check1">휴대폰 본인확인 서비스 약관동의</label>
-          </div>
-          <div className="item">
-            <label className="check_img_box" htmlFor="check2">
-              <Check />
-            </label>
-            <input type="checkbox" id="check2" />
-            <label htmlFor="check2">준회원 이용약관</label>
-          </div>
-          <div className="item">
-            <label className="check_img_box" htmlFor="check3">
-              <Check />
-            </label>
-            <input type="checkbox" id="check3" />
-            <label htmlFor="check3">
-              개인(신용)정보 수집이용 동의(회원가입/휴대폰 본인인증)
-            </label>
-          </div>
+          <AgreementCheckbox data={agreementItems} />
         </div>
         <div className="sign_btn_box">
           <button>인증번호 받기</button>
