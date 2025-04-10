@@ -187,6 +187,7 @@
 }
 
 .email_box .select_box ul {
+  opacity: 0;
   visibility: hidden;
   width: 100%;
   padding: 0.5rem 0.8rem;
@@ -219,5 +220,6 @@
 }
 
 .email_box ul.active {
+  opacity: 1;
   visibility: visible;
 }
