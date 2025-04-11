@@ -21,7 +21,7 @@ const SignIn = () => {
         </h2>
       </div>
       <div className="sign_in_content">
-        <ul>
+        <ul className="menu_btn">
           <li className="active">이메일로 로그인</li>
           <li>QR코드로 로그인</li>
         </ul>
