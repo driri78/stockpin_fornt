@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signIn.css";
 import Email from "../inputBox/Email";
@@ -12,6 +12,8 @@ const agreementItems = [
 ];
 
 const SignIn = () => {
+  const [select, setSelect] = useState(false);
+
   return (
     <div className="sign_in">
       <div className="sign_in_title">
@@ -26,7 +28,7 @@ const SignIn = () => {
           <li>QR코드로 로그인</li>
         </ul>
         <div className="sign_in_input_box">
-          <Email />
+          <Email select={select} setSelect={setSelect} />
           <Password />
           {/* <div className="name_birth_box">
             <div className="item">

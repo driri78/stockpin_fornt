@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signUp.css";
 import Email from "../inputBox/Email";
@@ -14,8 +14,9 @@ const agreementItems = [
     text: "개인(신용)정보 수집이용 동의(회원가입/휴대폰 본인인증)",
   },
 ];
-
 const SignUp = () => {
+  const [select, setSelect] = useState(false);
+
   return (
     <div className="sign_up">
       <div className="sign_up_title">
@@ -77,7 +78,7 @@ const SignUp = () => {
               />
             </div> 
           </div>*/}
-          <Email />
+          <Email select={select} setSelect={setSelect} />
           <Password />
         </div>
         <div className="sign_check_box">

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Email = () => {
-  const [select, setSelect] = useState(false);
-
+const Email = ({ select, setSelect }) => {
   return (
     <div className="email_box">
       <div className="input_box">
