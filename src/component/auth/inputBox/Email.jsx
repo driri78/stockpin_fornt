@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Email = ({ select, setSelect }) => {
+const Email = forwardRef(({ select, setSelect }, ref) => {
   return (
     <div className="email_box">
       <div className="input_box">
@@ -11,6 +11,7 @@ const Email = ({ select, setSelect }) => {
         <span>@</span>
       </div>
       <div
+        ref={ref}
         className="select_box essential_input"
         onClick={() => setSelect(!select)}
       >
@@ -28,6 +29,6 @@ const Email = ({ select, setSelect }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Email;
