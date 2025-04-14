@@ -4,6 +4,7 @@ import "@assets/css/auth/signUp.css";
 import Email from "../inputBox/Email";
 import Password from "../inputBox/Password";
 import AgreementCheckbox from "../AgreementCheckbox";
+import Birth from "../inputBox/Birth";
 
 const agreementItems = [
   { id: "all", text: "필수 약관에 모두 동의" },
@@ -27,30 +28,7 @@ const SignUp = () => {
       </div>
       <div className="sign_up_content">
         <div className="sign_up_input_box">
-          <div className="birth_box">
-            <div className="item">
-              <input
-                className="essential_input"
-                type="text"
-                placeholder="생년월일"
-                maxLength={"6"}
-              />
-            </div>
-            <div>
-              <span>-</span>
-            </div>
-            <div className="after_number_box">
-              <div className="item">
-                <input
-                  className="essential_input"
-                  type="text"
-                  placeholder=""
-                  maxLength={"1"}
-                />
-              </div>
-              <span className="secret_number">●●●●●●</span>
-            </div>
-          </div>
+          <Birth />
           <div className="name_box">
             <input className="essential_input" type="text" placeholder="이름" />
           </div>
