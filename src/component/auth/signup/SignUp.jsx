@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "@assets/css/auth/signUp.css";
 import Email from "../inputBox/Email";
@@ -17,7 +17,21 @@ const agreementItems = [
 ];
 const SignUp = () => {
   const [select, setSelect] = useState(false);
+  const ref = useRef(null);
 
+  // outside click Email
+  const clickOutside = (event) => {
+    if (ref.current && !ref.current.contains(event.target)) {
+      setSelect(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", clickOutside);
+    return () => {
+      document.addEventListener("mousedown", clickOutside);
+    };
+  }, []);
   return (
     <div className="sign_up">
       <div className="sign_up_title">
@@ -56,7 +70,7 @@ const SignUp = () => {
               />
             </div> 
           </div>*/}
-          <Email select={select} setSelect={setSelect} />
+          <Email ref={ref} select={select} setSelect={setSelect} />
           <Password />
         </div>
         <div className="sign_check_box">
