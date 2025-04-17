@@ -5,6 +5,7 @@ import Email from "../inputBox/Email";
 import Password from "../inputBox/Password";
 import AgreementCheckbox from "../AgreementCheckbox";
 import Birth from "../inputBox/Birth";
+import Name from "../inputBox/Name";
 
 const agreementItems = [
   { id: "all", text: "필수 약관에 모두 동의" },
@@ -43,9 +44,7 @@ const SignUp = () => {
       <div className="sign_up_content">
         <div className="sign_up_input_box">
           <Birth />
-          <div className="name_box">
-            <input className="essential_input" type="text" placeholder="이름" />
-          </div>
+          <Name />
           {/* sms api 유료라 주석처리 => 대신 이메일 방식으로 변환*/}
           {/* <div className="phone_box">
             <button>
