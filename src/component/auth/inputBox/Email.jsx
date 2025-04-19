@@ -1,11 +1,13 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Email = forwardRef(({ select, setSelect }, ref) => {
+  const [afterDomain, setAfterDomain] = useState("");
+
   return (
     <div className="email_box">
-      <div className="input_box">
-        <input className="essential_input" type="text" placeholder="이메일" />
+      <div className="essential_input input_box">
+        <input className="text" type="text" placeholder="이메일" />
       </div>
       <div>
         <span>@</span>
@@ -15,8 +17,19 @@ const Email = forwardRef(({ select, setSelect }, ref) => {
         className="select_box essential_input"
         onClick={() => setSelect(!select)}
       >
-        <span>선택</span>
-        <IoIosArrowDown />
+        <div className="default show">
+          <span className="text">선택</span>
+          <IoIosArrowDown />
+        </div>
+        <div className="direct ">
+          <input
+            className="text"
+            type="text"
+            placeholder={"직접 입력"}
+            value={afterDomain}
+            onChange={setAfterDomain}
+          />
+        </div>
         <ul className={select ? "active" : ""}>
           <li>naver.com</li>
           <li>gmail.com</li>

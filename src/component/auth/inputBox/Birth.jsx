@@ -13,9 +13,9 @@ const Birth = () => {
   };
   return (
     <div className="birth_box">
-      <div className="item">
+      <div className="essential_input item">
         <input
-          className="essential_input"
+          className="text"
           type="text"
           placeholder="생년월일"
           maxLength={"6"}
@@ -27,9 +27,9 @@ const Birth = () => {
         <span>-</span>
       </div>
       <div className="after_number_box">
-        <div className="item">
+        <div className="essential_input item">
           <input
-            className="essential_input"
+            className="text"
             type="text"
             placeholder=""
             maxLength={"1"}

@@ -152,12 +152,16 @@
   border: 1px solid #eee;
   border-radius: 0.5rem;
 
-  font-size: 1rem;
-  font-weight: 500;
-
   transition: 0.2s;
 
   cursor: pointer;
+}
+
+.essential_input .text {
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .essential_input:hover,
@@ -180,10 +184,29 @@
   color: var(--primary-placeholder-font-color);
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   position: relative;
+}
+
+.email_box .select_box .default {
+  display: none;
+  width: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email_box .select_box .default.show {
+  display: flex;
+}
+
+.email_box .select_box .direct {
+  display: none;
+}
+
+.email_box .select_box .direct.show {
+  display: block;
 }
 
 .email_box .select_box ul {

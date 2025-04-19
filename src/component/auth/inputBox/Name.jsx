@@ -11,13 +11,15 @@ const Name = () => {
 
   return (
     <div className="name_box">
-      <input
-        className="essential_input"
-        type="text"
-        placeholder="이름"
-        value={name}
-        onChange={validName}
-      />
+      <div className="essential_input">
+        <input
+          className="text"
+          type="text"
+          placeholder="이름"
+          value={name}
+          onChange={validName}
+        />
+      </div>
     </div>
   );
 };

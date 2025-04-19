@@ -54,18 +54,6 @@
   margin-bottom: 0.5rem;
 }
 
-.sign_in_input_box input {
-  width: 100%;
-  padding: 0.9rem;
-  padding-left: 0.75rem;
-  border: 1px solid #eee;
-  border-radius: 0.5rem;
-
-  font-size: 1rem;
-
-  transition: 0.2s;
-}
-
 .sign_in_input_box input:hover,
 .sign_in_input_box input:focus {
   border-color: var(--primary-color);
