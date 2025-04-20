@@ -1,8 +1,45 @@
 import React, { forwardRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
+const domains = [
+  {
+    id: "1",
+    name: "naver.com",
+  },
+  {
+    id: "2",
+    name: "gmail.com",
+  },
+  {
+    id: "3",
+    name: "daum.net",
+  },
+  {
+    id: "4",
+    name: "hanmail.net",
+  },
+  {
+    id: "5",
+    name: "icloud.com",
+  },
+  {
+    id: "6",
+    name: "outlook.com",
+  },
+  {
+    id: "7",
+    name: "직접입력",
+  },
+];
+
 const Email = forwardRef(({ select, setSelect }, ref) => {
   const [afterDomain, setAfterDomain] = useState("");
+
+  const domainSelect = (e) => {
+    if (e.target.innerText === "직접입력") {
+    } else {
+    }
+  };
 
   return (
     <div className="email_box">
@@ -31,13 +68,11 @@ const Email = forwardRef(({ select, setSelect }, ref) => {
           />
         </div>
         <ul className={select ? "active" : ""}>
-          <li>naver.com</li>
-          <li>gmail.com</li>
-          <li>daum.net</li>
-          <li>hanmail.net</li>
-          <li>icloud.com</li>
-          <li>outlook.com</li>
-          <li>직접입력</li>
+          {domains.map((domain) => (
+            <li key={domain.id} onClick={domainSelect}>
+              {domain.name}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
