@@ -33,11 +33,16 @@ const domains = [
 ];
 
 const Email = forwardRef(({ select, setSelect }, ref) => {
+  const [show, setShow] = useState(false);
   const [afterDomain, setAfterDomain] = useState("");
 
   const domainSelect = (e) => {
     if (e.target.innerText === "직접입력") {
+      setAfterDomain("");
+      setShow(true);
     } else {
+      setShow(true);
+      setAfterDomain(e.target.innerText);
     }
   };
 
@@ -54,17 +59,17 @@ const Email = forwardRef(({ select, setSelect }, ref) => {
         className="select_box essential_input"
         onClick={() => setSelect(!select)}
       >
-        <div className="default show">
+        <div className={show ? "default" : "default show"}>
           <span className="text">선택</span>
           <IoIosArrowDown />
         </div>
-        <div className="direct ">
+        <div className={show ? "direct show" : "direct"}>
           <input
             className="text"
             type="text"
             placeholder={"직접 입력"}
             value={afterDomain}
-            onChange={setAfterDomain}
+            onChange={(e) => setAfterDomain(e.target.value)}
           />
         </div>
         <ul className={select ? "active" : ""}>
