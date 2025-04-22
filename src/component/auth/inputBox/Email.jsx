@@ -34,6 +34,7 @@ const domains = [
 
 const Email = forwardRef(({ select, setSelect }, ref) => {
   const [show, setShow] = useState(false);
+  const [email, setEamil] = useState("");
   const [afterDomain, setAfterDomain] = useState("");
 
   const domainSelect = (e) => {
@@ -49,7 +50,15 @@ const Email = forwardRef(({ select, setSelect }, ref) => {
   return (
     <div className="email_box">
       <div className="essential_input input_box">
-        <input className="text" type="text" placeholder="이메일" />
+        <input
+          className="text"
+          type="text"
+          placeholder="이메일"
+          title={email}
+          value={email}
+          onChange={(e) => setEamil(e.target.value)}
+          maxLength={254 - afterDomain.length}
+        />
       </div>
       <div>
         <span>@</span>
@@ -68,8 +77,10 @@ const Email = forwardRef(({ select, setSelect }, ref) => {
             className="text"
             type="text"
             placeholder={"직접 입력"}
+            title={afterDomain}
             value={afterDomain}
             onChange={(e) => setAfterDomain(e.target.value)}
+            maxLength={254 - email.length}
           />
         </div>
         <ul className={select ? "active" : ""}>
