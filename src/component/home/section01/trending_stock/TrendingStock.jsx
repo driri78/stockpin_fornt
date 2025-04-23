@@ -6,14 +6,6 @@ import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
 
 const Search = () => {
-  axios({ method: "get", url: "http://localhost:9090/api/stock/volume/top" })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
   return (
     <div className="search_container">
       <div className="content">
@@ -35,7 +27,7 @@ const Search = () => {
           <li>
             <div className="stocks">
               <div className="like_btn_img_box">
-                <FaHeart />
+                <FaHeart style={{ color: "#ff0000" }} />
               </div>
               <div className="number">1</div>
               <div className="name">
