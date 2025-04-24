@@ -1,9 +1,73 @@
 import React, { useState } from "react";
 import "@assets/css/home/section01/trendingStock.css";
 import { FaBuildingUser, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
+import LikeBtn from "@/component/common/like_btn/LikeBtn";
+import { FaHeart } from "react-icons/fa";
+import StockListItem from "./StockListItem";
+const tmp = [
+  {
+    name: "삼성전자",
+    value: 70200,
+    rate: 1.5,
+    volume: 1200000,
+  },
+  {
+    name: "LG에너지솔루션",
+    value: 420000,
+    rate: -0.8,
+    volume: 800000,
+  },
+  {
+    name: "카카오",
+    value: 58000,
+    rate: 0.3,
+    volume: 560000,
+  },
+  {
+    name: "현대차",
+    value: 190000,
+    rate: 2.1,
+    volume: 430000,
+  },
+  {
+    name: "네이버",
+    value: 150000,
+    rate: -1.2,
+    volume: 670000,
+  },
+  {
+    name: "SK하이닉스",
+    value: 112000,
+    rate: 1.8,
+    volume: 970000,
+  },
+  {
+    name: "POSCO홀딩스",
+    value: 310000,
+    rate: 0.5,
+    volume: 390000,
+  },
+  {
+    name: "셀트리온",
+    value: 176000,
+    rate: -2.3,
+    volume: 450000,
+  },
+  {
+    name: "한화에어로스페이스",
+    value: 124000,
+    rate: 0.9,
+    volume: 380000,
+  },
+  {
+    name: "두산에너빌리티",
+    value: 21000,
+    rate: 3.0,
+    volume: 720000,
+  },
+];
 
 const Search = () => {
   return (
@@ -24,156 +88,9 @@ const Search = () => {
             <span className="fluctuating_value_rate">등락률</span>
             <span className="trading_volume">거래량</span>
           </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart style={{ color: "#ff0000" }} />
-              </div>
-              <div className="number">1</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>아스테라시스</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+73%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">2</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>현대차</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate down">-2.6%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">3</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>쏠리드</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+11%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">4</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>한화오션</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+27%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">5</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>일진전기</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+0.4%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">6</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>알테오젠</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate down">-11%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">7</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>고영</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+45%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">8</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>한미반도체체</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate down">-1.2%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">9</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>클로봇</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+3.3%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
-          <li>
-            <div className="stocks">
-              <div className="like_btn_img_box">
-                <FaHeart />
-              </div>
-              <div className="number">10</div>
-              <div className="name">
-                <FaBuildingUser />
-                <span>루미르</span>
-              </div>
-            </div>
-            <div className="value">1576원</div>
-            <div className="fluctuating_value_rate up">+8%</div>
-            <div className="trading_volume">254,023주</div>
-          </li>
+          {tmp.map((stock, index) => (
+            <StockListItem key={stock.name} stock={stock} index={index} />
+          ))}
         </ul>
       </div>
       <nav className="paging_container">
