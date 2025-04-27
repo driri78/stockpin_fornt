@@ -40,7 +40,7 @@
 }
 
 .search_container .content .rank li {
-  padding: 0.75rem;
+  padding: 0.5rem;
 
   font-size: 0.9rem;
 
@@ -72,13 +72,17 @@
 }
 
 .search_container .content .stocks .like_btn_img_box {
-  margin-left: 0.5rem;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.5rem;
 
   color: var(--primary-placeholder-font-color);
 
   cursor: pointer;
+}
+
+.search_container .content .stocks .like_btn_img_box.active {
+  color: var(--primary-color);
 }
 
 .search_container .content .stocks .like_btn_img_box svg {
