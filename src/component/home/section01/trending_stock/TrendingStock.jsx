@@ -1,75 +1,83 @@
 import React, { useState } from "react";
 import "@assets/css/home/section01/trendingStock.css";
-import { FaBuildingUser, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
-import LikeBtn from "@/component/common/like_btn/LikeBtn";
-import { FaHeart } from "react-icons/fa";
 import StockListItem from "./StockListItem";
-const tmp = [
-  {
-    name: "삼성전자",
-    value: 70200,
-    rate: 1.5,
-    volume: 1200000,
-  },
-  {
-    name: "LG에너지솔루션",
-    value: 420000,
-    rate: -0.8,
-    volume: 800000,
-  },
-  {
-    name: "카카오",
-    value: 58000,
-    rate: 0.3,
-    volume: 560000,
-  },
-  {
-    name: "현대차",
-    value: 190000,
-    rate: 2.1,
-    volume: 430000,
-  },
-  {
-    name: "네이버",
-    value: 150000,
-    rate: -1.2,
-    volume: 670000,
-  },
-  {
-    name: "SK하이닉스",
-    value: 112000,
-    rate: 1.8,
-    volume: 970000,
-  },
-  {
-    name: "POSCO홀딩스",
-    value: 310000,
-    rate: 0.5,
-    volume: 390000,
-  },
-  {
-    name: "셀트리온",
-    value: 176000,
-    rate: -2.3,
-    volume: 450000,
-  },
-  {
-    name: "한화에어로스페이스",
-    value: 124000,
-    rate: 0.9,
-    volume: 380000,
-  },
-  {
-    name: "두산에너빌리티",
-    value: 21000,
-    rate: 3.0,
-    volume: 720000,
-  },
-];
 
 const Search = () => {
+  const tmp = [
+    {
+      name: "삼성전자",
+      value: 70200,
+      rate: 1.5,
+      volume: 1200000,
+    },
+    {
+      name: "LG에너지솔루션",
+      value: 420000,
+      rate: -0.8,
+      volume: 800000,
+    },
+    {
+      name: "카카오",
+      value: 58000,
+      rate: 0.3,
+      volume: 560000,
+    },
+    {
+      name: "현대차",
+      value: 190000,
+      rate: 2.1,
+      volume: 430000,
+    },
+    {
+      name: "네이버",
+      value: 150000,
+      rate: -1.2,
+      volume: 670000,
+    },
+    {
+      name: "SK하이닉스",
+      value: 112000,
+      rate: 1.8,
+      volume: 970000,
+    },
+    {
+      name: "POSCO홀딩스",
+      value: 310000,
+      rate: 0.5,
+      volume: 390000,
+    },
+    {
+      name: "셀트리온",
+      value: 176000,
+      rate: -2.3,
+      volume: 450000,
+    },
+    {
+      name: "한화에어로스페이스",
+      value: 124000,
+      rate: 0.9,
+      volume: 380000,
+    },
+    {
+      name: "두산에너빌리티",
+      value: 21000,
+      rate: 3.0,
+      volume: 720000,
+    },
+  ];
+  axios
+    .get("")
+    .then((response) => {
+      console.log(response.data);
+      tmp = response.data;
+    })
+    .catch((error) => {
+      console.error("에러 발생:", error);
+    });
+
   return (
     <div className="search_container">
       <div className="content">
