@@ -14,22 +14,22 @@ const StockListItem = ({ stock, index }) => {
           <span>{stock.name}</span>
         </div>
       </div>
-      <div className="value">{`${formatNumber(stock.value)}원`}</div>
-      {stock.rate == 0 ? (
+      <div className="value">{`${stock.price}원`}</div>
+      {stock.chgRate == 0 ? (
         <div className="fluctuating_value_rate">0%</div>
-      ) : stock.rate > 0 ? (
+      ) : stock.chgRate > 0 ? (
         <div className="fluctuating_value_rate up">
           <span>+</span>
-          {stock.rate}%
+          {stock.chgRate}%
         </div>
       ) : (
         <div className="fluctuating_value_rate down">
           <span>-</span>
-          {stock.rate * -1}%
+          {stock.chgRate * -1}%
         </div>
       )}
 
-      <div className="trading_volume">{formatNumber(stock.volume)}주</div>
+      <div className="trading_volume">{stock.data.acmlVol}주</div>
     </li>
   );
 };
