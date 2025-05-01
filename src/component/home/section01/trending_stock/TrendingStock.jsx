@@ -12,7 +12,6 @@ const Search = () => {
     axios
       .get(`${apiUrl}/volume/top`)
       .then((response) => {
-        console.log(response.data);
         setStockList(response.data);
       })
       .catch((error) => {
