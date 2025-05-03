@@ -6,13 +6,14 @@ import axios from "axios";
 import StockListItem from "./StockListItem";
 
 const Search = () => {
+  const [data, setData] = useState(null);
   const [stockList, setStockList] = useState(null);
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_PRICE_API_URL;
     axios
       .get(`${apiUrl}/volume/top`)
       .then((response) => {
-        setStockList(response.data);
+        setData(response.data);
       })
       .catch((error) => {
         console.error("에러 발생:", error);

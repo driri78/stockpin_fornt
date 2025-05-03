@@ -28,7 +28,6 @@ const StockListItem = ({ stock, index }) => {
           {stock.chgRate * -1}%
         </div>
       )}
-
       <div className="trading_volume">{stock.data.acmlVol}주</div>
     </li>
   );
