@@ -6,20 +6,30 @@ import axios from "axios";
 import StockListItem from "./StockListItem";
 
 const Search = () => {
-  const [data, setData] = useState(null);
-  const [stockList, setStockList] = useState(null);
+  const [data, setData] = useState([]);
+  const [stockList, setStockList] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_PRICE_API_URL;
-    axios
-      .get(`${apiUrl}/volume/top`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("에러 발생:", error);
-      });
+    const getValumTopData = async () => {
+      const apiUrl = import.meta.env.VITE_PRICE_API_URL;
+      axios
+        .get(`${apiUrl}/volume/top`)
+        .then((response) => {
+          setData(response.data);
+          setCurrentPage(1);
+        })
+        .catch((error) => {
+          console.error("에러 발생:", error);
+        });
+    };
+    getValumTopData();
   }, []);
-  if (stockList === null) return <div>로딩중...</div>;
+
+  useEffect(() => {
+    setStockList(data.slice((currentPage - 1) * 10, currentPage * 10));
+  }, [currentPage]);
+
+  if (data === null) return <div>로딩중...</div>;
   return (
     <div className="search_container">
       <div className="content">
@@ -43,6 +53,7 @@ const Search = () => {
           ))}
         </ul>
       </div>
+      {/* <Paging/> */}
       <nav className="paging_container">
         <ul>
           <li className="img_box">
