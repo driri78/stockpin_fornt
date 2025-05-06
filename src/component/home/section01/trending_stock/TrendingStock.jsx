@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "@assets/css/home/section01/trendingStock.css";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
 import StockListItem from "./StockListItem";
+import Paging from "./Paging";
 
 const Search = () => {
   const [data, setData] = useState([]);
@@ -49,31 +50,21 @@ const Search = () => {
             <span className="trading_volume">거래량</span>
           </li>
           {stockList.map((stock, index) => (
-            <StockListItem key={stock.code} stock={stock} index={index} />
+            <StockListItem
+              key={stock.code}
+              stock={stock}
+              index={index}
+              currentPage={currentPage}
+            />
           ))}
         </ul>
       </div>
-      {/* <Paging/> */}
-      <nav className="paging_container">
-        <ul>
-          <li className="img_box">
-            <FaAngleLeft />
-          </li>
-          <li className="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li className="img_box">
-            <FaAngleRight />
-          </li>
-        </ul>
-      </nav>
+      <Paging
+        first={1}
+        last={10}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   );
 };

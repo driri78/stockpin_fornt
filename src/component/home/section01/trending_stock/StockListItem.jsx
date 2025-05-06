@@ -3,12 +3,12 @@ import { formatNumber } from "@/util/number";
 import React from "react";
 import { FaBuildingUser } from "react-icons/fa6";
 
-const StockListItem = ({ stock, index }) => {
+const StockListItem = ({ stock, index, currentPage }) => {
   return (
     <li>
       <div className="stocks">
         <LikeBtn />
-        <div className="number">{index + 1}</div>
+        <div className="number">{10 * (currentPage - 1) + index + 1}</div>
         <div className="name">
           <FaBuildingUser />
           <span>{stock.name}</span>
