@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlusCircle, FaHeart } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { IoFilter } from "react-icons/io5";
@@ -8,11 +8,29 @@ import { LiaArrowsAltVSolid } from "react-icons/lia";
 import "@assets/css/stocks/stocks.css";
 import { KoreaFlag } from "@/assets/images/Image";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const Stocks = () => {
   const navigate = useNavigate();
   const goDetail = (id) => {
     navigate(`/stock/${id}/price`);
   };
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    const getStockFilter = async () => {
+      const apiUrl = import.meta.env.VITE_PRICE_API_URL;
+      axios
+        .get(`${apiUrl}/screener/7`)
+        .then((response) => {
+          setData(response.data);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error("에러 발생:", error);
+        });
+    };
+    getStockFilter();
+  }, []);
   return (
     <div className="stock_list_container">
       <aside>
