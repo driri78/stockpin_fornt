@@ -10,6 +10,7 @@ import { KoreaFlag } from "@/assets/images/Image";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import StockFilterList from "./StockFilterList";
+import FilterTitle from "./FilterTitle";
 const Stocks = () => {
   const navigate = useNavigate();
   const goDetail = (id) => {
@@ -57,10 +58,7 @@ const Stocks = () => {
         <StockFilterList />
       </aside>
       <main>
-        <div className="filter_title_container">
-          <h3>연속 상승세</h3>
-          <p>일주일 연속 상승세를 보이는 주식</p>
-        </div>
+        <FilterTitle />
         <nav className="filter_list_container">
           <ul>
             <li>
