@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { FaPlusCircle, FaHeart } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
-import { IoFilter } from "react-icons/io5";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoMdRefresh } from "react-icons/io";
 import { LiaArrowsAltVSolid } from "react-icons/lia";
 import "@assets/css/stocks/stocks.css";
-import { KoreaFlag } from "@/assets/images/Image";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import StockFilterList from "./StockFilterList";
 import FilterTitle from "./FilterTitle";
+import FilterElement from "./FilterElement";
 const Stocks = () => {
   const navigate = useNavigate();
   const goDetail = (id) => {
@@ -59,65 +57,7 @@ const Stocks = () => {
       </aside>
       <main>
         <FilterTitle />
-        <nav className="filter_list_container">
-          <ul>
-            <li>
-              <button>
-                <div className="filter_icon_box">
-                  <IoFilter />
-                </div>
-                <span>필터 추가</span>
-              </button>
-              <div></div>
-            </li>
-            <li>
-              <button>
-                <div className="filter_info_box">
-                  <div className="flag_img_box">
-                    <KoreaFlag />
-                  </div>
-                  <span>국내</span>
-                </div>
-                <div className="arrow_down_img_box">
-                  <MdKeyboardArrowDown />
-                </div>
-              </button>
-              <div></div>
-            </li>
-            <li>
-              <button>
-                <span>카테고리</span>
-                <div className="arrow_down_img_box">
-                  <MdKeyboardArrowDown />
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span>시가총액</span>
-                <div className="arrow_down_img_box">
-                  <MdKeyboardArrowDown />
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span>거래량</span>
-                <div className="arrow_down_img_box">
-                  <MdKeyboardArrowDown />
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span>주가 등락률</span>
-                <div className="arrow_down_img_box">
-                  <MdKeyboardArrowDown />
-                </div>
-              </button>
-            </li>
-          </ul>
-        </nav>
+        <FilterElement />
         <table className="filter_stock_list_container">
           <thead>
             <tr>
