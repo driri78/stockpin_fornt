@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "@assets/css/stocks/stocks.css";
 import { FaPlusCircle } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import StockFilterList from "./StockFilterList";
 import FilterTitle from "./FilterTitle";
 import FilterElement from "./FilterElement";
 import StockList from "./StockList";
 const Stocks = () => {
-  const navigate = useNavigate();
-  const goDetail = (id) => {
-    navigate(`/stock/${id}/price`);
-  };
   const [data, setData] = useState("");
 
   useEffect(() => {
     const getStockFilter = async () => {
       const apiUrl = import.meta.env.VITE_PRICE_API_URL;
       axios
-        .get(`${apiUrl}/screener/7`)
+        .get(`${apiUrl}/screener/2`)
         .then((response) => {
           setData(response.data);
           console.log(response.data);
@@ -56,7 +51,7 @@ const Stocks = () => {
       <main>
         <FilterTitle />
         <FilterElement />
-        <StockList />
+        <StockList filterStockList={data} />
       </main>
     </div>
   );
