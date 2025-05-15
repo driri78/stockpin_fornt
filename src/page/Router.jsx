@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { SignInPage, SignUpPage } from "./auth/auth";
 import HomePage from "./home/HomePage";
-import StocksPage from "./stock/StocksPage";
+import StocksPage from "./stocks/StocksPage";
 import {
   StockPricePage,
   StockInfoPage,

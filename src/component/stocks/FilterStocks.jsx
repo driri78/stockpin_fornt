@@ -2,18 +2,19 @@ import React, { useEffect, useState } from "react";
 import "@assets/css/stocks/stocks.css";
 import { FaPlusCircle } from "react-icons/fa";
 import axios from "axios";
-import StockFilterList from "./StockFilterList";
+import FilterList from "./FilterList";
 import FilterTitle from "./FilterTitle";
 import FilterElement from "./FilterElement";
 import StockList from "./StockList";
-const Stocks = () => {
+const FilterStocks = () => {
+  const [filterId, setFilterId] = useState("2");
   const [data, setData] = useState("");
 
   useEffect(() => {
     const getStockFilter = async () => {
       const apiUrl = import.meta.env.VITE_PRICE_API_URL;
       axios
-        .get(`${apiUrl}/screener/2`)
+        .get(`${apiUrl}/screener/${filterId}`)
         .then((response) => {
           setData(response.data);
           console.log(response.data);
@@ -23,7 +24,7 @@ const Stocks = () => {
         });
     };
     getStockFilter();
-  }, []);
+  }, [filterId]);
   return (
     <div className="stock_list_container">
       <aside>
@@ -46,15 +47,15 @@ const Stocks = () => {
             </li>
           </ul>
         </div>
-        <StockFilterList />
+        <FilterList filterId={filterId} setFilterId={setFilterId} />
       </aside>
       <main>
         <FilterTitle />
-        <FilterElement />
+        <FilterElement stockListCnt={data.length} />
         <StockList filterStockList={data} />
       </main>
     </div>
   );
 };
 
-export default Stocks;
+export default FilterStocks;

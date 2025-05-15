@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "@assets/css/home/section01/trendingStock.css";
-
 import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
 import StockListItem from "./StockListItem";

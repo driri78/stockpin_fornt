@@ -2,34 +2,39 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { upDownNumber } from "@/util/numberUtil";
 
-const Stock = () => {
+const Stock = ({ stockInfo, index }) => {
   const navigate = useNavigate();
   const goDetail = (id) => {
     navigate(`/stock/${id}/price`);
   };
   return (
-    <tr onClick={() => goDetail(1)}>
+    <tr onClick={() => goDetail(stockInfo.code)}>
       <td>
         <div className="stock_info_container">
           <button className="like_btn_img_box">
             <FaHeart />
           </button>
-          <span className="number">1</span>
+          <span className="number">{index + 1}</span>
           <div className="info">
             <FaBuildingUser />
-            <span>애플</span>
+            <span>{stockInfo.name}</span>
           </div>
         </div>
       </td>
       <td>
         <div>
-          <span>333,383원</span>
+          <span>{stockInfo.price}원</span>
         </div>
       </td>
       <td>
-        <div className="fluctuating_value_rate down">
-          <span>-2.5%</span>
+        <div
+          className={`fluctuating_value_rate ${upDownNumber(
+            stockInfo.chgRate
+          )}`}
+        >
+          <span>{stockInfo.chgRate}%</span>
           <span>-8300원</span>
         </div>
       </td>
@@ -40,12 +45,12 @@ const Stock = () => {
       </td>
       <td>
         <div>
-          <span>5,086.7조원</span>
+          <span>{stockInfo.data.stotPrice}억원</span>
         </div>
       </td>
       <td>
         <div>
-          <span>101,075,128주</span>
+          <span>{stockInfo.data.acmlVol}주</span>
         </div>
       </td>
     </tr>

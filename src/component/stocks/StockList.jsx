@@ -10,7 +10,7 @@ const StockList = ({ filterStockList }) => {
         <tr>
           <th>
             <button>
-              <span>검색된 주식</span>・<span>100개</span>
+              <span>검색된 주식</span>・<span>{filterStockList.length}개</span>
               <IoMdRefresh />
             </button>
           </th>
@@ -48,8 +48,8 @@ const StockList = ({ filterStockList }) => {
         </tr>
       </thead>
       <tbody>
-        {filterStockList.map((stock) => (
-          <Stock key={stock.code} />
+        {filterStockList.map((stockInfo, index) => (
+          <Stock key={stockInfo.code} stockInfo={stockInfo} index={index} />
         ))}
       </tbody>
     </table>

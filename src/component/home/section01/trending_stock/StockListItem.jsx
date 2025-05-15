@@ -1,5 +1,4 @@
 import LikeBtn from "@/component/common/like_btn/LikeBtn";
-import { formatNumber } from "@/util/number";
 import React from "react";
 import { FaBuildingUser } from "react-icons/fa6";
 

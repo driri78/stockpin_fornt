@@ -1,10 +1,10 @@
 import React from "react";
-import Stocks from "@component/stocks/Stocks";
+import FilterStocks from "@/component/stocks/FilterStocks";
 
 const StocksPage = () => {
   return (
     <div>
-      <Stocks />
+      <FilterStocks />
     </div>
   );
 };
