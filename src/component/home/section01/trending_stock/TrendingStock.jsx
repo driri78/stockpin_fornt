@@ -4,6 +4,7 @@ import { BsFillExclamationCircleFill } from "react-icons/bs";
 import axios from "axios";
 import StockListItem from "./StockListItem";
 import Paging from "./Paging";
+import TredingTitle from "./TredingTitle";
 
 const Search = () => {
   const [data, setData] = useState([]);
@@ -33,10 +34,7 @@ const Search = () => {
   return (
     <div className="search_container">
       <div className="content">
-        <div className="title">
-          <h2>실시간 차트</h2>
-          <span>10:25</span>
-        </div>
+        <TredingTitle />
         <div className="explanation">
           <BsFillExclamationCircleFill />
           <p>실시간 가장 많이 검색하고 있는 주식 순서</p>
