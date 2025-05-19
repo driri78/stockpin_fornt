@@ -3,7 +3,8 @@ function numberFomat(number) {
 }
 
 function chgRateFomat(number) {
-  return Math.floor(number * 10) / 10;
+  let rate = Math.floor(number * 10) / 10;
+  return number > 0 ? `+${rate}` : rate;
 }
 
 function upDownNumber(number) {

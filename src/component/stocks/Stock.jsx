@@ -2,7 +2,7 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import { upDownNumber } from "@/util/numberUtil";
+import { chgRateFomat, numberFomat, upDownNumber } from "@/util/numberUtil";
 
 const Stock = ({ stockInfo, index }) => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Stock = ({ stockInfo, index }) => {
       </td>
       <td>
         <div>
-          <span>{stockInfo.price}원</span>
+          <span>{numberFomat(stockInfo.price)}원</span>
         </div>
       </td>
       <td>
@@ -34,7 +34,7 @@ const Stock = ({ stockInfo, index }) => {
             stockInfo.chgRate
           )}`}
         >
-          <span>{stockInfo.chgRate}%</span>
+          <span>{chgRateFomat(stockInfo.chgRate)}%</span>
           <span>-8300원</span>
         </div>
       </td>
@@ -45,12 +45,12 @@ const Stock = ({ stockInfo, index }) => {
       </td>
       <td>
         <div>
-          <span>{stockInfo.data.stotPrice}억원</span>
+          <span>{numberFomat(stockInfo.data.stotPrice)}억원</span>
         </div>
       </td>
       <td>
         <div>
-          <span>{stockInfo.data.acmlVol}주</span>
+          <span>{numberFomat(stockInfo.data.acmlVol)}주</span>
         </div>
       </td>
     </tr>
