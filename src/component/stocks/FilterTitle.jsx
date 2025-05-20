@@ -1,10 +1,11 @@
 import React from "react";
 
-const FilterTitle = () => {
+const FilterTitle = ({ filterInfo, filterId }) => {
+  const result = filterInfo.find((item) => item.id === filterId);
   return (
     <div className="filter_title_container">
-      <h3>연속 상승세</h3>
-      <p>일주일 연속 상승세를 보이는 주식</p>
+      <h3>{result.title}</h3>
+      <p>{result.content}</p>
     </div>
   );
 };

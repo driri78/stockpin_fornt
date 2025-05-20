@@ -7,6 +7,29 @@ import FilterTitle from "./FilterTitle";
 import FilterElement from "./FilterElement";
 import StockList from "./StockList";
 const FilterStocks = () => {
+  const filterInfo = [
+    {
+      id: "2",
+      title: "연속 상승세",
+      content: "일주일 연속 상승세를 보이는 주식",
+    },
+    {
+      id: "3",
+      title: "꾸준한 배당주",
+      content: "배당을 꾸준히 하는 주식",
+    },
+    {
+      id: "4",
+      title: "돈 잘 버는 회사",
+      content: "매출과 이익을 크게 내는 회사",
+    },
+    {
+      id: "5",
+      title: "안정 성장주",
+      content: "꾸준하게 이익이 늘고 있는 회사",
+    },
+  ];
+
   const [filterId, setFilterId] = useState("2");
   const [data, setData] = useState("");
 
@@ -47,10 +70,14 @@ const FilterStocks = () => {
             </li>
           </ul>
         </div>
-        <FilterList filterId={filterId} setFilterId={setFilterId} />
+        <FilterList
+          filterInfo={filterInfo}
+          filterId={filterId}
+          setFilterId={setFilterId}
+        />
       </aside>
       <main>
-        <FilterTitle />
+        <FilterTitle filterInfo={filterInfo} filterId={filterId} />
         <FilterElement stockListCnt={data.length} />
         <StockList filterStockList={data} />
       </main>
