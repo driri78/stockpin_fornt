@@ -19,13 +19,11 @@ const StockListItem = ({ stock, index, currentPage }) => {
         <div className="fluctuating_value_rate">0%</div>
       ) : stock.chgRate > 0 ? (
         <div className="fluctuating_value_rate up">
-          <span>+</span>
           {chgRateFomat(stock.chgRate)}%
         </div>
       ) : (
         <div className="fluctuating_value_rate down">
-          <span>-</span>
-          {chgRateFomat(stock.chgRate * -1)}%
+          {chgRateFomat(stock.chgRate)}%
         </div>
       )}
       <div className="trading_volume">{numberFomat(stock.data.acmlVol)}주</div>
